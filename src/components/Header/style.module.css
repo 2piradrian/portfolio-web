@@ -1,0 +1,34 @@
+.background {
+	position: absolute;
+	background: var(--background);
+	box-shadow: 3px 3px 5px -2px rgba(22, 22, 26, 0.3);
+}
+
+.subcontainer {
+	height: 60px;
+	width: 100%;
+	padding: 0px 25px;
+	max-width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 2;
+}
+
+.iso {
+	height: 22px;
+	width: auto;
+}
+
+.burger {
+	height: 16px;
+	width: auto;
+	color: var(--contrast);
+	cursor: pointer;
+}
+
+@media (min-width: 900px) {
+	.burger {
+		display: none;
+	}
+}
