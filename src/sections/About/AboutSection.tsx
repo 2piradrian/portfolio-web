@@ -1,12 +1,13 @@
 import Image from "next/image";
 import profile from "../../assets/images/profile.webp";
 import style from "./style.module.css";
+import Title from "@/components/Title/Title";
 
 export default function AboutSection() {
 	return (
 		<div className="bigcontainer">
 			<Image src={profile} alt="profile image" className={style.profilePhoto} />
-			<h1 className={style.title}>Adrián Rodriguez</h1>
+			<Title title="Adrián Rodriguez" />
 			<div className={style.presentation}>
 				<p>{`Hi, I am Adrián, a software developer from Córdoba, Argentina.`}</p>
 				<p>
