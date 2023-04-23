@@ -1,0 +1,19 @@
+.container {
+	height: 100px;
+	width: 80%;
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.institution {
+	font-size: 24px;
+}
+
+.description {
+	margin: 5px 0px;
+	font-size: 20px;
+	font-weight: 400;
+}
