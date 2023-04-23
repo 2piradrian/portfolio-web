@@ -1,0 +1,27 @@
+.title {
+	font-size: 32px;
+	font-weight: 600;
+	margin: 40px;
+	color: var(--contrast);
+}
+
+.profilePhoto {
+	height: 250px;
+	width: 250px;
+	object-fit: cover;
+	object-position: 0px -50px;
+	border-radius: 50%;
+}
+
+.presentation {
+	width: 70%;
+	max-width: 700px;
+}
+
+.presentation > p {
+	font-size: 18px;
+	font-weight: 400;
+	margin: 20px;
+	color: var(--contrast);
+	text-align: center;
+}

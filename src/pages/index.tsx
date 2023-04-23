@@ -1,12 +1,10 @@
 import AppLayout from "@/layout/AppLayout";
-import Hero from "@/sections/Hero/Hero";
+import HeroSection from "@/sections/Hero/HeroSection";
 
 export default function Home() {
 	return (
 		<AppLayout title="Home">
-			<div className="bigcontainer">
-				<Hero />
-			</div>
+			<HeroSection />
 		</AppLayout>
 	);
 }

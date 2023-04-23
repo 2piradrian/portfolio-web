@@ -2,7 +2,7 @@ import Image from "next/image";
 import circle from "../../assets/svg/circle.svg";
 import style from "./style.module.css";
 
-export default function Hero() {
+export default function HeroSection() {
 	return (
 		<div className={`bigcontainer ${style.background}`}>
 			<div className={style.subcontainer}>
