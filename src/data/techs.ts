@@ -14,7 +14,7 @@ export type Tech = {
 	img: string;
 };
 
-export const frontendArray: Tech[] = [
+export const techs: Tech[] = [
 	{
 		id: 0,
 		name: "HTML",
@@ -45,9 +45,6 @@ export const frontendArray: Tech[] = [
 		name: "Redux",
 		img: redux,
 	},
-];
-
-export const backendArray: Tech[] = [
 	{
 		id: 8,
 		name: "Java",
