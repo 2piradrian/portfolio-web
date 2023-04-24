@@ -4,7 +4,7 @@ import ProjectTechs from "../Project-Tech/ProjectTech";
 
 export default function ProjectCard({ title, description, img, techs, github }: Project) {
 	return (
-		<a className={style.anchor} aria-label="github project" href={github}>
+		<a className={style.anchor} aria-label="github project" href={github} target="_blank">
 			<div className={style.container}>
 				<img
 					src={

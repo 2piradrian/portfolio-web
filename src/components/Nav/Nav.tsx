@@ -37,7 +37,7 @@ export default function Nav({ setClosed }: Props) {
 					</Link>
 				</li>
 				<li className={style.navRoutes}>
-					<Link href="/Contact" aria-label="contact">
+					<Link href="/contact" aria-label="contact">
 						Contact
 					</Link>
 				</li>
