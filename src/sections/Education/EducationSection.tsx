@@ -10,7 +10,7 @@ export default function EducationSection() {
 				<EducationCard
 					institution="Universidad Nacional de Córdoba"
 					certificate="Electromechanical Engineering"
-					date="2020 - 2022 (specialty change)"
+					date="2020 - 2022 (not ended)"
 				/>
 				<EducationCard
 					institution="Universidad Tecnológica Nacional"

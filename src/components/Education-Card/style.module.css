@@ -1,11 +1,12 @@
 .container {
-	height: 100px;
+	min-height: 110px;
 	width: 80%;
 	max-width: 700px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
+	padding: 2px 0px;
 }
 
 .institution {

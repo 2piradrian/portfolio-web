@@ -25,4 +25,9 @@ export const principal: Skill[] = [
 		name: "Spring Boot",
 		img: require("../assets/techs/springboot.svg"),
 	},
+	{
+		id: 5,
+		name: "J. Compose",
+		img: require("../assets/techs/compose.svg"),
+	},
 ];
