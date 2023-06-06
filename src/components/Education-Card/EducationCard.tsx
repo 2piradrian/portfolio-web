@@ -11,7 +11,7 @@ export default function EducationCard({ institution, certificate, date }: Props)
 		<div className={style.container}>
 			<h2 className={style.institution}>{institution}</h2>
 			<h3 className={style.description}>{certificate}</h3>
-			<h4>| {date}</h4>
+			<h4 className={style.date}>| {date}</h4>
 		</div>
 	);
 }
