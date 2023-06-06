@@ -8,14 +8,14 @@ export default function EducationSection() {
 			<Title title="My education" />
 			<div className={style.container}>
 				<EducationCard
-					institution="Universidad Nacional de Córdoba"
-					certificate="Electromechanical Engineering"
-					date="2020 - 2022 (not ended)"
-				/>
-				<EducationCard
 					institution="Universidad Tecnológica Nacional"
 					certificate="Systems Engineering"
 					date="2023 - present"
+				/>
+				<EducationCard
+					institution="Universidad Nacional de Córdoba"
+					certificate="Electromechanical Engineering"
+					date="2020 - 2022 (change of specialty)"
 				/>
 				<EducationCard
 					institution="Nucba"
