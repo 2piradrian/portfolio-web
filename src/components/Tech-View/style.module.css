@@ -1,11 +1,20 @@
 .box {
-	width: 100px;
+	width: 150px;
 	height: 70px;
-	margin: 0px 5px;
+	margin: 5px;
+	gap: 5px;
+	border-radius: 10px;
 	display: flex;
-	flex-direction: column;
-	justify-content: start;
+	flex-direction: row;
+	justify-content: center;
 	align-items: center;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+	cursor: default;
+}
+
+.box:hover {
+	transform: scale(1.1);
 }
 
 .box > img {
