@@ -4,7 +4,7 @@ import EducationCard from "@/components/Education-Card/EducationCard";
 
 export default function EducationSection() {
 	return (
-		<div className="bigcontainer">
+		<div className="wrapcontainer">
 			<Title title="My education" />
 			<div className={style.container}>
 				<EducationCard

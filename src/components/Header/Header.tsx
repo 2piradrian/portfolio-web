@@ -29,7 +29,7 @@ export default function Header() {
 					onClick={() => setClosed(false)}
 				/>
 
-				{!closed && <Nav setClosed={setClosed} />}
+				<Nav setClosed={setClosed} closed={closed} />
 			</div>
 		</header>
 	);

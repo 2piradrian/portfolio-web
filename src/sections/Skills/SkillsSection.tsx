@@ -6,7 +6,7 @@ import { techs } from "@/data/techs";
 
 export default function SkillsSection() {
 	return (
-		<div className="bigcontainer">
+		<div className="wrapcontainer">
 			<Title title="Programming Skills" />
 			<div className={style.container}>
 				{principal.map((tech) => (
