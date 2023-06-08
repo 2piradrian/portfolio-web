@@ -1,15 +1,14 @@
 import { Project } from "@/data/projects";
 import style from "./style.module.css";
 import ProjectTechs from "../Project-Tech/ProjectTech";
+import Image from "next/image";
 
 export default function ProjectCard({ title, description, img, techs, github }: Project) {
 	return (
 		<a className={style.anchor} aria-label="github project" href={github} target="_blank">
 			<div className={style.container}>
-				<img
-					src={
-						"https://img.freepik.com/free-vector/work-progress-rubber-stamp_1017-7150.jpg"
-					}
+				<Image
+					src={require(`../../assets/projects/${img}`)}
 					alt={title}
 					className={style.image}
 				/>

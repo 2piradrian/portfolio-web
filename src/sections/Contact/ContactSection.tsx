@@ -1,10 +1,12 @@
 import Title from "@/components/Title/Title";
+import Image from "next/image";
+
 import style from "./style.module.css";
+
 import linkedin from "../../assets/svg/linkedin.svg";
-import email from "../../assets/svg/email.svg";
+import email from "../../assets/svg/mail.svg";
 import github from "../../assets/svg/github.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
-import Image from "next/image";
 
 export default function ContactSection() {
 	return (
