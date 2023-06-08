@@ -1,5 +1,12 @@
+.subcontainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
 .divisor img {
-	height: 100px;
+	height: 150px;
 	width: auto;
 	margin: 10px;
 }
