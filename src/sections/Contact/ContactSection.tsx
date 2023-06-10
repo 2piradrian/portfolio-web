@@ -7,6 +7,7 @@ import linkedin from "../../assets/svg/linkedin.svg";
 import email from "../../assets/svg/mail.svg";
 import github from "../../assets/svg/github.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
+import ContactCard from "@/components/Contact-Card/ContactCard";
 
 export default function ContactSection() {
 	return (
@@ -14,36 +15,24 @@ export default function ContactSection() {
 			<Title title="Contact me" />
 			<div className={style.subcontainer}>
 				<div className={style.divisor}>
-					<a
+					<ContactCard
 						href="https://www.linkedin.com/in/rodriguezcadr/"
-						aria-label="linkedin"
-						target="_blank"
-						rel="noreferrer">
-						<Image src={linkedin} alt="linkedin" />
-					</a>
-					<a
+						alt="Linkedin"
+						img={linkedin}
+					/>
+					<ContactCard
 						href="mailto:rodriguezcadr@gmail.com?subject=Contacto%20por%20portfolio"
-						aria-label="email"
-						target="_blank"
-						rel="noreferrer">
-						<Image src={email} alt="email" />
-					</a>
+						alt="Email"
+						img={email}
+					/>
 				</div>
 				<div className={style.divisor}>
-					<a
+					<ContactCard
 						href="https://api.whatsapp.com/send?phone=543516135462"
-						aria-label="whatsapp"
-						target="_blank"
-						rel="noreferrer">
-						<Image src={whatsapp} alt="whatsapp" />
-					</a>
-					<a
-						href="https://github.com/2piradrian"
-						aria-label="github"
-						target="_blank"
-						rel="noreferrer">
-						<Image src={github} alt="github" />
-					</a>
+						alt="Whatsapp"
+						img={whatsapp}
+					/>
+					<ContactCard href="https://github.com/2piradrian" alt="Github" img={github} />
 				</div>
 			</div>
 		</div>
