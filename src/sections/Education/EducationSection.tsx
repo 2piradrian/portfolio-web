@@ -19,7 +19,7 @@ export default function EducationSection() {
 				/>
 				<EducationCard
 					institution="Nucba"
-					certificate="Full Stack Developer"
+					certificate="Full Stack Developer M.E.R.N."
 					date="2022 - 2023"
 				/>
 				<EducationCard
