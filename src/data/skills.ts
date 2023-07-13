@@ -18,7 +18,7 @@ export const principal: Skill[] = [
 	{
 		id: 3,
 		name: "Node",
-		img: require("../assets/techs/node.svg"),
+		img: require("../assets/techs/nodejs.svg"),
 	},
 	{
 		id: 4,

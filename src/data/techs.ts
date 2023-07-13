@@ -9,7 +9,7 @@ import kotlin from "../assets/techs/kotlin.svg";
 import springboot from "../assets/techs/springboot.svg";
 import compose from "../assets/techs/compose.svg";
 import express from "../assets/techs/express.svg";
-import node from "../assets/techs/node.svg";
+import node from "../assets/techs/nodejs.svg";
 
 export type Tech = {
 	id: number;
