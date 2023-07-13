@@ -8,6 +8,8 @@ import java from "../assets/techs/java.svg";
 import kotlin from "../assets/techs/kotlin.svg";
 import springboot from "../assets/techs/springboot.svg";
 import compose from "../assets/techs/compose.svg";
+import express from "../assets/techs/express.svg";
+import node from "../assets/techs/node.svg";
 
 export type Tech = {
 	id: number;
@@ -60,7 +62,7 @@ export const techs: Tech[] = [
 		id: 10,
 		name: "Spring Boot",
 		img: springboot,
-	} /*
+	},
 	{
 		id: 11,
 		name: "Express",
@@ -70,7 +72,7 @@ export const techs: Tech[] = [
 		id: 12,
 		name: "Node",
 		img: node,
-	}, */,
+	},
 	{
 		id: 13,
 		name: "J. Compose",

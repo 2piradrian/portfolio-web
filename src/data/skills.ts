@@ -17,13 +17,13 @@ export const principal: Skill[] = [
 	},
 	{
 		id: 3,
-		name: "Kotlin",
-		img: require("../assets/techs/kotlin.svg"),
+		name: "Node",
+		img: require("../assets/techs/node.svg"),
 	},
 	{
 		id: 4,
-		name: "Spring Boot",
-		img: require("../assets/techs/springboot.svg"),
+		name: "Kotlin",
+		img: require("../assets/techs/kotlin.svg"),
 	},
 	{
 		id: 5,
