@@ -1,0 +1,35 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 10px 0px;
+}
+
+.image {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+	margin: 20px 0px;
+}
+
+.title {
+	margin: 20px 0px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--surface);
+	color: var(--onSurface);
+	border: 2px solid var(--onSurface);
+}
+
+.text {
+	font-size: 18px;
+	margin: 10px 0px;
+}
+
+.link {
+	font-size: 18px;
+	line-height: 50px;
+	font-weight: 700;
+	text-decoration: underline;
+}

@@ -1,0 +1,481 @@
+[
+    {
+        "id": 0,
+        "title": "Ayudante de Santa",
+        "description": "Sistema de cultivos automatizados",
+        "technologies": ["KOTLIN", "COMPOSE", "TS", "NODEJS", "EXPRESS", "MONGODB", "C"],
+        "images": [
+            "/images/project-ads1.png",
+            "/images/project-ads2.png",
+            "/images/project-ads3.png"
+        ],
+        "structure": {
+            "longDescription": "Sistema de cultivos automatizados, con control de humedad, temperatura, luz, y riego.",
+            "elements": [
+                {
+                    "type": "title",
+                    "content": "Links"
+                },
+                {
+                    "type": "link",
+                    "content": "Google Play Store",
+                    "url": "https://play.google.com/store/apps/details?id=com.twopiradrian.ads"
+                },
+                {
+                    "type": "link",
+                    "content": "Instagram",
+                    "url": "https://www.instagram.com/ayudantedsok/"
+                },
+                {
+                    "type": "title",
+                    "content": "Notas"
+                },
+                {
+                    "type": "text",
+                    "content": "Debido a que es un proyecto en desarrollo para ser comercializado, no se puede mostrar el código."
+                },
+                {
+                    "type": "text",
+                    "content": "En el proyecto tengo un socio, contador y gran amigo a quien admiro, con el cual abrimos una S.A.S., mientras que el se encarga de la parte legal y financiera, yo me encargo del desarrollo, y ambos trabajamos a la vez en la parte técnica física (soldadura, armado, empaquetado, etc.)."
+                },
+                {
+                    "type": "text",
+                    "content": "Actualmente tengo hecho el backend y la app con patrón repositorio y clean architecture."
+                },
+                {
+                    "type": "title",
+                    "content": "Aprendizaje"
+                },
+                {
+                    "type": "text",
+                    "content": "El proyecto me llevo de la mano, y me hizo enfrentarme a varios desafíos. Al tener que desarrollar el firmware del microcontrolador, me vi en la necesidad de aprender C, y al tener que desarrollar la app, me vi en la necesidad de aprender Kotlin y Compose. Ni hablar de arquitecturas limpias, y patrones de diseño, que me ayudaron a mejorar mi código y a hacerlo más mantenible. Sin duda, un proyecto que me hizo crecer como desarrollador y como persona."
+                },
+                {
+                    "type": "title",
+                    "content": "La aplicación"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-ads5.png",
+                    "alt": "Aplicación"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-ads4.png",
+                    "alt": "Aplicación"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-ads6.png",
+                    "alt": "Aplicación"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-ads7.png",
+                    "alt": "Aplicación"
+                },
+                {
+                    "type": "title",
+                    "content": "Estructura"
+                },
+                {
+                    "type": "text",
+                    "content": "Está estructurado en tres repositorios, uno para la app, otro para el backend, y otro para el firmware del microcontrolador."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-ads3.png",
+                    "alt": "Estructura del proyecto"
+                },
+                {
+                    "type": "title",
+                    "content": "Producto"
+                },
+                {
+                    "type": "text",
+                    "content": "El producto consiste en un sistema de cultivos automatizados, con control de humedad, temperatura, luz, y riego. Con una app para controlar el sistema, y un backend para almacenar los datos y enviar notificaciones."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-ads2.png",
+                    "alt": "Producto"
+                }
+            ]
+        }
+    },
+    {
+        "id": 1,
+        "title": "Botanist",
+        "description": "Red social de plantas",
+        "technologies": ["KOTLIN", "COMPOSE", "TS", "NODEJS", "EXPRESS", "MONGODB", "POSTGRESQL"],
+        "images": [
+            "/images/project-botanist1.png",
+            "/images/project-botanist2.png",
+            "/images/project-botanist3.png",
+            "/images/project-botanist4.png"
+        ],
+        "structure": {
+            "longDescription": "Red social con temática de plantas, donde los usuarios pueden compartir publicaciones de sus plantas o consejos y ver las de los demás.",
+            "elements": [
+                {
+                    "type": "title",
+                    "content": "Links"
+                },
+                {
+                    "type": "link",
+                    "content": "Repositorio App",
+                    "url": "https://github.com/2piradrian/botanist-app"
+                },
+                {
+                    "type": "link",
+                    "content": "Repositorio Backend",
+                    "url": "https://github.com/2piradrian/botanist-backend"
+                },
+                {
+					"type": "title",
+					"content": "Notas"
+				},
+				{
+					"type": "text",
+					"content":
+						"Es una especie de red social, apenas es un MVP pues me encantaría agregarle más funciones. Pero por ahora tiene un CRUD de plantas y de usuarios, y un sistema de likes y seguidos."
+				},
+				{
+					"type": "text",
+					"content": "Tanto el backend como el frontend fueron diseñados usando clean architecture y patrón repositorio."
+				},
+				{
+					"type": "title",
+					"content": "El backend"
+				},
+				{
+					"type": "text",
+					"content": "Del lado del servidor, tengo un backend hecho en Node.js (Express) que utiliza dos bases de datos."
+				},
+				{
+					"type": "text",
+					"content": "Esto surge de tomar el desafío que alguna vez un profesor de Spring Boot me dió: usar dos bases de datos en un solo backend, para esto usé MongoDB para la información de los usuarios y PostgreSQL para los posteos."
+				},
+				{
+					"type": "title",
+					"content": "El frontend"
+				},
+				{
+					"type": "text",
+					"content": "Del lado del usuario, cuento con una app en Android Nativo hecha con Kotlin (Jetpack Compose), aprovechando y siguiendo los lineamientos de Google para hacer un diseño adaptativo, es decir, esta app es compatible con dispositivos plegables y tablets."
+				},
+				{
+					"type": "title",
+					"content": "Diseño mobile"
+				},
+				{
+					"type": "image",
+					"content": "/images/project-botanist2.png",
+                    "alt": "Diseño mobile"
+				},
+				{
+					"type": "title",
+					"content": "Diseño foldable"
+				},
+				{
+					"type": "image",
+					"content": "/images/project-botanist3.png",
+                    "alt": "Diseño foldable"
+				},
+				{
+					"type": "title",
+					"content": "Diseño tablets"
+				},
+				{
+					"type": "image",
+					"content": "/images/project-botanist4.png",
+                    "alt": "Diseño tablets"
+				}
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "title": "Sistema Siete Colores",
+        "description": "Sistema de gestión de presupuestos y stock",
+        "technologies": ["TS", "REACT", "NODEJS", "EXPRESS", "MONGODB"],
+        "images": [
+            "/images/project-siete-colores1.png"
+        ],
+        "structure": {
+            "longDescription": "Sistema para gestionar productos para una empresa familiar de producción de herramientas para artesanía.",
+            "elements": [
+                {
+                    "type": "title",
+                    "content": "Links"
+                },
+                {
+                    "type": "link",
+                    "content": "Repositorio Frontend",
+                    "url": "https://github.com/2piradrian/siete-colores-system"
+                },
+                {
+                    "type": "link",
+                    "content": "Repositorio Backend",
+                    "url": "https://github.com/2piradrian/siete-colores-backend"
+                },
+                {
+                    "type": "title",
+                    "content": "Notas"
+                },
+                {
+                    "type": "text",
+                    "content": "Es un sistema de gestión de productos, cálculo de cuentas frecuentes como porcentajes de aumentos, generación de presupuestos y estadísticas."
+                },
+                {
+                    "type": "title",
+                    "content": "El backend"
+                },
+                {
+                    "type": "text",
+                    "content": "Del lado del servidor, tengo un backend hecho en Node.js (Express) que utiliza una base de datos no relacional, con patron repositorio y clean architecture."
+                },
+                {
+                    "type": "title",
+                    "content": "El frontend"
+                },
+                {
+                    "type": "text",
+                    "content": "Del lado del usuario, cuento con una app en React que simplemente consume el backend."
+                },
+                {
+                    "type": "title",
+                    "content": "Aprendizaje"
+                },
+                {
+                    "type": "text",
+                    "content": "Este proyecto se ejecuta a través de un .bat, fue muy satisfactorio poder hacerlo. Además imprime los presupuestos en un formato personalizado, y genera un PDF con el presupuesto y el stock actualizado."
+                },
+                {
+                    "type": "title",
+                    "content": "Editor de productos"
+                },
+                {
+                    "type": "text",
+                    "content": "El sistema cuenta con un editor de productos, donde se pueden agregar, editar y eliminar productos."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores5.png",
+                    "alt": "Editor de productos"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores7.png",
+                    "alt": "Editor de productos"
+                },
+                {
+                    "type": "title",
+                    "content": "Editor de categorías"
+                },
+                {
+                    "type": "text",
+                    "content": "El sistema cuenta con un editor de categorías, donde se pueden agregar, editar y eliminar categorías."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores3.png",
+                    "alt": "Editor de categorías"
+                },
+                {
+                    "type": "title",
+                    "content": "Creador de presupuestos"
+                },
+                {
+                    "type": "text",
+                    "content": "El sistema es capaz de generar presupuestos, con un formato personalizado, y generar un PDF con el presupuesto."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores4.png",
+                    "alt": "Creador de presupuestos"
+                },
+                {
+                    "type": "title",
+                    "content": "Estadísticas"
+                },
+                {
+                    "type": "text",
+                    "content": "El sistema cuenta con estadísticas generadas mes a mes."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores6.png",
+                    "alt": "Estadísticas"
+                },
+                {
+                    "type": "title",
+                    "content": "Herramientas"
+                },
+                {
+                    "type": "text",
+                    "content": "El sistema cuenta con herramientas para calcular porcentajes de aumentos, y para actualizar precios en cantidad."
+                },
+                {	
+                    "type": "image",
+                    "content": "/images/project-siete-colores2.png",
+                    "alt": "Herramientas"
+                }
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "title": "Siete Colores Web",
+        "description": "E-commerce de herramientas para artesanía",
+        "technologies": ["TS", "REACT"],
+        "images": [
+            "/images/project-siete-colores-web1.png"
+        ],
+        "links": [
+            {
+                "name": "Repositorio",
+                "url": "https://github.com/2piradrian/siete-colores-web"
+            },
+            {
+                "name": "Sitio Web",
+                "url": "https://sietecolores3d.com.ar/"
+            }
+        ],
+        "structure": {
+            "longDescription": "E-commerce de herramientas para artesanía, con carrito de compras y sistema de pagos.",
+            "elements": [
+                {
+                    "type": "title",
+                    "content": "Links"
+                },
+                {
+                    "type": "link",
+                    "content": "Repositorio",
+                    "url": "https://github.com/2piradrian/siete-colores-web"
+                },
+                {
+                    "type": "link",
+                    "content": "Sitio Web",
+                    "url": "https://sietecolores3d.com.ar/"
+                },
+                {
+                    "type": "title",
+                    "content": "Notas"
+                },
+                {
+                    "type": "text",
+                    "content": "Es un e-commerce de herramientas para artesanía, con carrito de compras y finalización en whatsapp con su API."
+                },
+                {
+                    "type": "title",
+                    "content": "Aprendizaje"
+                },
+                {
+                    "type": "text",
+                    "content": "Este proyecto me permitió aprender a hacer un e-commerce desde cero, fue de mis primeros proyectos, por lo que ha pasado por bastantes cambios."
+                },
+                {
+                    "type": "title",
+                    "content": "Excepción"
+                },
+                {
+                    "type": "text",
+                    "content": "En lugar de consumir un api, lee desde un JSON porque el cliente lo prefería así."
+                },
+                {
+                    "type": "title",
+                    "content": "Página de inicio"
+                },
+                {
+                    "type": "text",
+                    "content": "Catalogo web de productos, con un buscador y un carrito de compras."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores-web4.png",
+                    "alt": "Pagina de inicio"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores-web3.png",
+                    "alt": "Pagina de inicio"
+                },
+                {
+                    "type": "title",
+                    "content": "Carrito de compras"
+                },
+                {
+                    "type": "text",
+                    "content": "El web cuenta con un carrito de compras, donde se pueden agregar y eliminar productos."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores-web2.png",
+                    "alt": "Carrito de compras"
+                }
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "title": "Music Forum",
+        "description": "Backend con arquitectura de microservicios",
+        "technologies": ["SPRINGBOOT", "POSTGRESQL", "MONGODB", "JAVA"],
+        "images": [
+            "/images/project-music-forum1.png"
+        ],
+        "links": [
+            {
+                "name": "Repositorio",
+                "url": "https://github.com/2piradrian/music-forum-microservices"
+            }
+        ],
+        "structure": {
+            "longDescription": "Backend con arquitectura de microservicios, para un foro de música.",
+            "elements": [
+                {
+                    "type": "title",
+                    "content": "Links"
+                },
+                {
+                    "type": "link",
+                    "content": "Repositorio",
+                    "url": "https://github.com/2piradrian/music-forum-microservices"
+                },
+                {
+                    "type": "title",
+                    "content": "Notas"
+                },
+                {
+                    "type": "text",
+                    "content": "El proyecto es solo backend, implementando microservicios con Spring Boot & Spring Cloud, MongoDB y PostgreSQL."
+                },
+                {
+                    "type": "title",
+                    "content": "Arquitectura"
+                },
+                {
+                    "type": "text",
+                    "content": "Utilicé Clean Architecture en el desarrollo independiente de cada microservicio. Además hice una librería de utilidades para compartir entre los microservicios."
+                },
+                {
+                    "type": "title",
+                    "content": "Microservicios críticos"
+                },
+                {
+                    "type": "text",
+                    "content": "El primero es el 'registry-server' que es el servidor de registro de los microservicios, pensado para que los microservicios puedan registrarse y descubrirse entre ellos. Luego está el 'gateway-server' que es el servidor de puerta de enlace, que es el encargado de enrutar las peticiones a los microservicios correspondientes."
+                },
+                {
+                    "type": "title",
+                    "content": "Microservicios de funcionalidad"
+                },
+                {
+                    "type": "text",
+                    "content": "Luego, los que resuelven el problema de dominio, y brindan la lógica de negocio a la app son 4 microservicios que son 'auth-service', 'forum-service' y 'report-server'. Estos resuelven la autenticación, el foro y comentarios de los mismos, y los reportes respectivamente."
+                }
+            ]
+        }
+    }
+]
