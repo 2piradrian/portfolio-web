@@ -1,0 +1,26 @@
+:root {
+	--main: #ab3600;
+	--secondary: #77574c;
+	--tertiary: #393005;
+	--background: #fff;
+	--surface: #f2f4fb;
+	--contrast: #201a18;
+	--shadow: #201a1823;
+	
+	--onBackground: #f1dfd9;
+	--onSurface: #201a18;
+
+	--max-width: 1200px;
+	--container-width: 85%;
+
+	--border-radius-big: 22px;
+	--border-radius-medium: 16px;
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--container-width: 90%;
+	}
+}
+
+/* fff1ed */

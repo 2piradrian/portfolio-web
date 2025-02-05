@@ -1,0 +1,14 @@
+.projectContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+@media screen and (max-width: 768px) {
+	.projectContainer {
+		gap: 20px;
+	}
+}
