@@ -211,13 +211,8 @@
                 },
                 {
                     "type": "link",
-                    "content": "Repositorio Frontend",
+                    "content": "Repositorio",
                     "url": "https://github.com/2piradrian/siete-colores-system"
-                },
-                {
-                    "type": "link",
-                    "content": "Repositorio Backend",
-                    "url": "https://github.com/2piradrian/siete-colores-backend"
                 },
                 {
                     "type": "title",
@@ -327,7 +322,7 @@
     {
         "id": 3,
         "title": "Siete Colores Web",
-        "description": "E-commerce de herramientas para artesanía",
+        "description": "Catálogo web de herramientas para artesanía",
         "technologies": ["TS", "REACT"],
         "images": [
             "/images/project-siete-colores-web1.png"
@@ -343,7 +338,7 @@
             }
         ],
         "structure": {
-            "longDescription": "E-commerce de herramientas para artesanía, con carrito de compras y sistema de pagos.",
+            "longDescription": "Catálogo web de herramientas para artesanía, con carrito de compras.",
             "elements": [
                 {
                     "type": "title",
@@ -373,7 +368,7 @@
                 },
                 {
                     "type": "text",
-                    "content": "Este proyecto me permitió aprender a hacer un e-commerce desde cero, fue de mis primeros proyectos, por lo que ha pasado por bastantes cambios."
+                    "content": "Este proyecto me permitió aprender a hacer un catálogo web desde cero, fue de mis primeros proyectos, por lo que ha pasado por bastantes cambios."
                 },
                 {
                     "type": "title",
