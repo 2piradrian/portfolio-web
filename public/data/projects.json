@@ -18,6 +18,11 @@
                 },
                 {
                     "type": "link",
+                    "content": "Web",
+                    "url": "https://ayudantedesanta.com.ar"
+                },
+                {
+                    "type": "link",
                     "content": "Google Play Store",
                     "url": "https://play.google.com/store/apps/details?id=com.twopiradrian.ads"
                 },
@@ -36,11 +41,7 @@
                 },
                 {
                     "type": "text",
-                    "content": "En el proyecto tengo un socio, contador y gran amigo a quien admiro, con el cual abrimos una S.A.S., mientras que el se encarga de la parte legal y financiera, yo me encargo del desarrollo, y ambos trabajamos a la vez en la parte técnica física (soldadura, armado, empaquetado, etc.)."
-                },
-                {
-                    "type": "text",
-                    "content": "Actualmente tengo hecho el backend y la app con patrón repositorio y clean architecture."
+                    "content": "En el proyecto tengo un socio, contador y gran amigo a quien admiro. Mientras que el se encarga de la parte legal y financiera, yo me encargo del desarrollo, y ambos trabajamos a la vez en la parte técnica física (soldadura, armado, empaquetado, etc.)."
                 },
                 {
                     "type": "title",
@@ -48,7 +49,7 @@
                 },
                 {
                     "type": "text",
-                    "content": "El proyecto me llevo de la mano, y me hizo enfrentarme a varios desafíos. Al tener que desarrollar el firmware del microcontrolador, me vi en la necesidad de aprender C, y al tener que desarrollar la app, me vi en la necesidad de aprender Kotlin y Compose. Ni hablar de arquitecturas limpias, y patrones de diseño, que me ayudaron a mejorar mi código y a hacerlo más mantenible. Sin duda, un proyecto que me hizo crecer como desarrollador y como persona."
+                    "content": "El proyecto me llevo de la mano, y me hizo enfrentarme a varios desafíos. Al tener que desarrollar el firmware del microcontrolador, me vi en la necesidad de aprender C, y al tener que desarrollar la app, me vi en la necesidad de aprender Kotlin y Jetpack Compose. Luego llegaron al proyecto las arquitecturas limpias, y patrones de diseño, que me ayudaron a mejorar mi código y a hacerlo más mantenible."
                 },
                 {
                     "type": "title",
@@ -138,7 +139,7 @@
 				{
 					"type": "text",
 					"content":
-						"Es una especie de red social, apenas es un MVP pues me encantaría agregarle más funciones. Pero por ahora tiene un CRUD de plantas y de usuarios, y un sistema de likes y seguidos."
+						"Es un MVP de red social. Por ahora solo tiene un CRUD de posteos y de usuarios, junto con un sistema de likes y seguidos."
 				},
 				{
 					"type": "text",
@@ -236,15 +237,7 @@
                 },
                 {
                     "type": "text",
-                    "content": "Del lado del usuario, cuento con una app en React que simplemente consume el backend."
-                },
-                {
-                    "type": "title",
-                    "content": "Aprendizaje"
-                },
-                {
-                    "type": "text",
-                    "content": "Este proyecto se ejecuta a través de un .bat, fue muy satisfactorio poder hacerlo. Además imprime los presupuestos en un formato personalizado, y genera un PDF con el presupuesto y el stock actualizado."
+                    "content": "Del lado del usuario, cuenta con una app en React consumiida por Electron. Se utilizó un patrón MVVM para la arquitectura del frontend."
                 },
                 {
                     "type": "title",
