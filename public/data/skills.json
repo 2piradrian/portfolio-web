@@ -1,9 +1,9 @@
 {
     "list": [
 	    ["TypeScript", "Node.js", "Express.js"],
-	    ["Java", "Kotlin", "Spring boot"],
+	    ["Java", "Kotlin", "Spring boot", "Android Jetpack"],
         ["HTML", "CSS", "JavaScript", "React.js"],
         ["NoSQL", "SQL"],
-	    ["Git", "Docker", "Linux", "Álgebra de Boole"]
+	    ["Git", "Docker", "Linux", "Python", "Álgebra de Boole"]
     ]
 }
