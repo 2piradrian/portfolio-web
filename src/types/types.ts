@@ -30,3 +30,11 @@ export type Education = {
 	institution: string;
 	date: string;
 };
+
+export type Experience = {
+	id: number;
+	position: string;
+	description: string;
+	company: string;
+	date: string;
+};
