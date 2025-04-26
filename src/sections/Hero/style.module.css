@@ -24,10 +24,32 @@
 
 .location {
 	display: flex;
+	align-items: center;
 	gap: 5px;
 	font-size: 18px;
 	color: var(--contrast);
 	margin-top: 20px;
+}
+
+.location > img {
+	width: 30px;
+	height: 30px;
+}
+
+
+.mail {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 18px;
+	color: var(--contrast);
+	margin-top: 10px;
+}
+
+.mail > img {
+	width: 30px;
+	height: 30px;
+	transform: scale(1.2);
 }
 
 .contact {
