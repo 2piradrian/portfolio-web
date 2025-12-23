@@ -3,23 +3,27 @@
 	margin-bottom: 50px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
 }
 
 .subcontainer img {
-	height: 100px;
+	height: 40px;
 	width: auto;
-	margin: 10px;
+	transition: transform 0.2s;
+}
+
+.subcontainer a:hover img {
+	transform: scale(1.1);
 }
 
 @media screen and (max-width: 575px) {
 	.subcontainer {
-		gap: 55px;
+		gap: 30px;
 	}
 
 	.subcontainer img {
-		height: 180px;
-		width: auto;
+		height: 32px;
 	}
 }

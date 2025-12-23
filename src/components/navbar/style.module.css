@@ -1,36 +1,32 @@
 .navList {
-	height: 100%;
-	width: 100%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	gap: 15px;
+	gap: 32px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .navRoutes {
-	width: 100%;
-	margin: 15px 0px;
-	text-align: center;
 	list-style: none;
-	font-size: 14px;
-	font-weight: 500;
-	letter-spacing: 1px;
-}
-
-.navRoutes > a:hover {
-	font-weight: 600;
-	color: var(--main);
 }
 
 .navRoutes > a {
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 15px;
 	color: var(--onSurface);
+	font-weight: 500;
+	transition: color 0.2s;
+}
+
+.navRoutes > a:hover {
+	color: var(--secondary);
 }
 
 @media screen and (max-width: 540px) {
-	.navRoutes > a {
-		font-size: 12px;
+	.navList {
+		gap: 20px;
+	}
+    .navRoutes > a {
+		font-size: 14px;
 	}
 }

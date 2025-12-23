@@ -5,19 +5,19 @@ import style from "./style.module.css";
 
 export default function ProjectCard({ id, title, description, images, technologies }: Project) {
 	return (
-		<Link href={`/project/${id}`} aria-label="go to the project" className={style.anchor}>
+		<Link href={`/project/${id}`} aria-label={`View project ${title}`} className={style.link}>
 			<div className={style.container}>
-				<img src={images[0]} alt={title} className={style.image} />
-				<div className={style.info}>
-					<div className={style.titleContainer}>
-						<h3 className={style.title}>{title}</h3>
-					</div>
-					<div className={style.descriptionContainer}>
-						<p className={style.description}>{description}</p>
-					</div>
-					<div className={style.technologiesContainer}>
+				<div className={style.thumbnailWrapper}>
+					<img src={images[0]} alt={title} className={style.thumbnail} />
+				</div>
+				<div className={style.content}>
+					<h3 className={style.title}>{title}</h3>
+					<p className={style.description}>{description}</p>
+					<div className={style.techStack}>
 						{technologies.map((technology) => (
-							<Tech tech={technology} key={technology} />
+							<div key={technology} className={style.techIcon}>
+								<Tech tech={technology} />
+							</div>
 						))}
 					</div>
 				</div>

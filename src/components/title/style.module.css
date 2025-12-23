@@ -1,5 +1,11 @@
 .title {
-	font-size: 46px;
+	font-size: 28px;
 	color: var(--contrast);
-	margin-bottom: 20px;
+	margin-bottom: 24px;
+	margin-top: 40px;
+	font-weight: 700;
+	border-bottom: 2px solid var(--contrast);
+	display: inline-block;
+	padding-bottom: 4px;
+	width: 100%;
 }

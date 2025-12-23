@@ -5,12 +5,14 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-family: "Roboto Mono", monospace;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 html,
 body {
 	overflow-x: hidden;
+	color: var(--contrast);
+	background-color: var(--background);
 }
 
 main {
@@ -34,7 +36,7 @@ a {
 	height: auto;
 	width: var(--container-width);
 	max-width: var(--max-width);
-	padding-top: 120px;
+	padding-top: 80px;
 
 	display: flex;
 	flex-direction: column;
