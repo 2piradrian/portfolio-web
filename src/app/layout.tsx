@@ -1,13 +1,13 @@
+import Header from "@/components/header/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
-import Header from "@/components/header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Portfolio",
-	description: "2piradrian portfolio",
+	title: "Portfolio | Rodriguez",
+	description: "Portfolio personal.",
 };
 
 export default function RootLayout({
