@@ -12,14 +12,11 @@
 	padding: 24px 0;
 	border-bottom: 1px solid rgba(119, 87, 76, 0.2);
 	transition: background-color 0.2s ease;
+	cursor: pointer;
 }
 
 .container:last-child {
 	border-bottom: none;
-}
-
-.container:hover {
-	background-color: rgba(119, 87, 76, 0.05);
 }
 
 .thumbnailWrapper {
@@ -79,10 +76,6 @@
 	height: 20px;
 	opacity: 0.8;
 	transition: opacity 0.2s;
-}
-
-.techIcon:hover img {
-	opacity: 1;
 }
 
 @media screen and (max-width: 600px) {
