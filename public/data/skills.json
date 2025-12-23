@@ -1,26 +1,56 @@
 [
     {
         "category": "Principal",
-        "items": ["Java", "Kotlin", "Spring Boot"]
+        "items": [
+            "Java",
+            "Kotlin",
+            "Spring Boot",
+            "TypeScript"
+        ]
     },
     {
         "category": "Backend",
-        "items": ["Java", "Kotlin", "Spring Boot", "Node.js", "Express.js"]
+        "items": [
+            "Java",
+            "Kotlin",
+            "Spring Boot",
+            "TypeScript",
+            "Node.js",
+            "Express.js"
+        ]
     },
     {
         "category": "Frontend Mobile",
-        "items": ["Kotlin", "Android Jetpack"]
+        "items": [
+            "Kotlin",
+            "Android Jetpack"
+        ]
     },
     {
         "category": "Frontend Web",
-        "items": ["HTML", "CSS", "JavaScript", "TypeScript", "React"]
+        "items": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "React"
+        ]
     },
     {
         "category": "Bases de Datos",
-        "items": ["PostgreSQL", "MongoDB"]
+        "items": [
+            "PostgreSQL",
+            "MongoDB"
+        ]
     },
     {
         "category": "Herramientas",
-        "items": ["Git", "Docker", "Python", "Bash", "Álgebra de Boole"]
+        "items": [
+            "Git",
+            "Docker",
+            "Python",
+            "Bash",
+            "Álgebra de Boole"
+        ]
     }
 ]
