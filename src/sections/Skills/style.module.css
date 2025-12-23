@@ -2,10 +2,26 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 32px;
 }
 
-.group {
+.categoryGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.categoryTitle {
+	font-size: 16px;
+	color: var(--secondary);
+	font-weight: 600;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	opacity: 0.8;
+}
+
+.skillsList {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
