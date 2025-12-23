@@ -352,9 +352,9 @@
         "title": "Music Forum",
         "description": "Backend basado en microservicios",
         "technologies": [
-            "SPRING BOOT",
-            "SPRING CLOUD",
             "JAVA",
+            "SPRINGBOOT",
+            "SPRINGCLOUD",
             "POSTGRESQL",
             "MONGODB"
         ],

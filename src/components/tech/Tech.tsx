@@ -23,6 +23,8 @@ export default function Tech({ tech }: Props) {
 			return <Image src={getImagePath("java")} alt="" />;
 		case "SPRINGBOOT":
 			return <Image src={getImagePath("springboot")} alt="" />;
+		case "SPRINGCLOUD":
+			return <Image src={getImagePath("springcloud")} alt="" />;
 		case "COMPOSE":
 			return <Image src={getImagePath("compose")} alt="" />;
 		case "FIREBASE":
