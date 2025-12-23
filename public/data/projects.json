@@ -3,14 +3,22 @@
         "id": 0,
         "title": "Ayudante de Santa",
         "description": "Sistema de cultivos automatizados",
-        "technologies": ["KOTLIN", "COMPOSE", "TS", "NODEJS", "EXPRESS", "MONGODB", "C"],
+        "technologies": [
+            "KOTLIN",
+            "COMPOSE",
+            "TS",
+            "NODEJS",
+            "EXPRESS",
+            "MONGODB",
+            "C"
+        ],
         "images": [
             "/images/project-ads1.png",
             "/images/project-ads2.png",
             "/images/project-ads3.png"
         ],
         "structure": {
-            "longDescription": "Sistema de cultivos automatizados, con control de humedad, temperatura, luz, y riego.",
+            "longDescription": "Plataforma integral de automatización de cultivos, orientada al control remoto y monitoreo de variables ambientales como humedad, temperatura, iluminación y riego.",
             "elements": [
                 {
                     "type": "title",
@@ -33,55 +41,71 @@
                 },
                 {
                     "type": "title",
-                    "content": "Notas"
+                    "content": "Contexto del proyecto"
                 },
                 {
                     "type": "text",
-                    "content": "Debido a que es un proyecto en desarrollo para ser comercializado, no se puede mostrar el código."
-                },
-                {
-                    "type": "text",
-                    "content": "En el proyecto tengo un socio, contador y gran amigo a quien admiro. Mientras que el se encarga de la parte legal y financiera, yo me encargo del desarrollo, y ambos trabajamos a la vez en la parte técnica física (soldadura, armado, empaquetado, etc.)."
+                    "content": "Ayudante de Santa es un proyecto orientado a producto, actualmente en desarrollo con fines comerciales. Por este motivo, el código fuente no es público."
                 },
                 {
                     "type": "title",
-                    "content": "Aprendizaje"
+                    "content": "Arquitectura general"
                 },
                 {
                     "type": "text",
-                    "content": "El proyecto me llevo de la mano, y me hizo enfrentarme a varios desafíos. Al tener que desarrollar el firmware del microcontrolador, me vi en la necesidad de aprender C, y al tener que desarrollar la app, me vi en la necesidad de aprender Kotlin y Jetpack Compose. Luego llegaron al proyecto las arquitecturas limpias, y patrones de diseño, que me ayudaron a mejorar mi código y a hacerlo más mantenible."
+                    "content": "El sistema está compuesto por tres capas bien definidas: un firmware embebido para el control físico del dispositivo, un backend centralizado para la gestión de datos y lógica de negocio, y una aplicación móvil para la interacción del usuario final."
                 },
                 {
                     "type": "title",
-                    "content": "La aplicación"
+                    "content": "Firmware"
+                },
+                {
+                    "type": "text",
+                    "content": "El firmware del microcontrolador fue desarrollado en C. Se encarga de la lectura de sensores, el control de actuadores (riego, iluminación y ventilación) y la comunicación con el backend para el envío de métricas y recepción de configuraciones."
+                },
+                {
+                    "type": "title",
+                    "content": "Backend"
+                },
+                {
+                    "type": "text",
+                    "content": "El backend está desarrollado en Node.js con Express y utiliza MongoDB como base de datos. Centraliza la lógica de negocio, el almacenamiento histórico de datos ambientales, la gestión de usuarios y dispositivos, y el envío de notificaciones."
+                },
+                {
+                    "type": "title",
+                    "content": "Aplicación móvil"
+                },
+                {
+                    "type": "text",
+                    "content": "La aplicación Android fue desarrollada en Kotlin utilizando Jetpack Compose. Permite visualizar métricas en tiempo real, configurar parámetros del sistema y gestionar múltiples dispositivos desde una única interfaz."
                 },
                 {
                     "type": "image",
                     "content": "/images/project-ads5.png",
-                    "alt": "Aplicación"
+                    "alt": "Aplicación móvil"
                 },
                 {
                     "type": "image",
                     "content": "/images/project-ads4.png",
-                    "alt": "Aplicación"
+                    "alt": "Aplicación móvil"
                 },
                 {
                     "type": "image",
                     "content": "/images/project-ads6.png",
-                    "alt": "Aplicación"
+                    "alt": "Aplicación móvil"
                 },
                 {
                     "type": "image",
                     "content": "/images/project-ads7.png",
-                    "alt": "Aplicación"
+                    "alt": "Aplicación móvil"
                 },
                 {
                     "type": "title",
-                    "content": "Estructura"
+                    "content": "Estructura del proyecto"
                 },
                 {
                     "type": "text",
-                    "content": "Está estructurado en tres repositorios, uno para la app, otro para el backend, y otro para el firmware del microcontrolador."
+                    "content": "El desarrollo se organiza en tres repositorios independientes: uno para la aplicación móvil, otro para el backend y otro para el firmware del microcontrolador, permitiendo una evolución desacoplada de cada componente."
                 },
                 {
                     "type": "image",
@@ -94,7 +118,7 @@
                 },
                 {
                     "type": "text",
-                    "content": "El producto consiste en un sistema de cultivos automatizados, con control de humedad, temperatura, luz, y riego. Con una app para controlar el sistema, y un backend para almacenar los datos y enviar notificaciones."
+                    "content": "El producto final consiste en un sistema físico de automatización de cultivos integrado con una plataforma digital. El usuario puede monitorear el estado del cultivo, definir reglas de control y recibir alertas, combinando hardware y software en una solución unificada."
                 },
                 {
                     "type": "image",
@@ -107,8 +131,16 @@
     {
         "id": 1,
         "title": "Botanist",
-        "description": "Red social de plantas",
-        "technologies": ["KOTLIN", "COMPOSE", "TS", "NODEJS", "EXPRESS", "MONGODB", "POSTGRESQL"],
+        "description": "Red social enfocada en plantas",
+        "technologies": [
+            "KOTLIN",
+            "COMPOSE",
+            "TS",
+            "NODEJS",
+            "EXPRESS",
+            "MONGODB",
+            "POSTGRESQL"
+        ],
         "images": [
             "/images/project-botanist1.png",
             "/images/project-botanist2.png",
@@ -116,7 +148,7 @@
             "/images/project-botanist4.png"
         ],
         "structure": {
-            "longDescription": "Red social con temática de plantas, donde los usuarios pueden compartir publicaciones de sus plantas o consejos y ver las de los demás.",
+            "longDescription": "Red social orientada a la comunidad, diseñada para compartir contenido, experiencias y conocimientos relacionados con el cuidado de plantas.",
             "elements": [
                 {
                     "type": "title",
@@ -133,78 +165,71 @@
                     "url": "https://github.com/2piradrian/botanist-backend"
                 },
                 {
-					"type": "title",
-					"content": "Notas"
-				},
-				{
-					"type": "text",
-					"content":
-						"Es un MVP de red social. Por ahora solo tiene un CRUD de posteos y de usuarios, junto con un sistema de likes y seguidos."
-				},
-				{
-					"type": "text",
-					"content": "Tanto el backend como el frontend fueron diseñados usando clean architecture y patrón repositorio."
-				},
-				{
-					"type": "title",
-					"content": "El backend"
-				},
-				{
-					"type": "text",
-					"content": "Del lado del servidor, tengo un backend hecho en Node.js (Express) que utiliza dos bases de datos."
-				},
-				{
-					"type": "text",
-					"content": "Esto surge de tomar el desafío que alguna vez un profesor de Spring Boot me dió: usar dos bases de datos en un solo backend, para esto usé MongoDB para la información de los usuarios y PostgreSQL para los posteos."
-				},
-				{
-					"type": "title",
-					"content": "El frontend"
-				},
-				{
-					"type": "text",
-					"content": "Del lado del usuario, cuento con una app en Android Nativo hecha con Kotlin (Jetpack Compose), aprovechando y siguiendo los lineamientos de Google para hacer un diseño adaptativo, es decir, esta app es compatible con dispositivos plegables y tablets."
-				},
-				{
-					"type": "title",
-					"content": "Diseño mobile"
-				},
-				{
-					"type": "image",
-					"content": "/images/project-botanist2.png",
+                    "type": "title",
+                    "content": "Alcance del proyecto"
+                },
+                {
+                    "type": "text",
+                    "content": "Botanist es un MVP de red social que implementa las funcionalidades centrales del dominio: gestión de usuarios, publicaciones, sistema de likes y relaciones de seguimiento."
+                },
+                {
+                    "type": "title",
+                    "content": "Arquitectura"
+                },
+                {
+                    "type": "text",
+                    "content": "Tanto el backend como la aplicación móvil fueron diseñados aplicando principios de Clean Architecture, con capas bien definidas y responsabilidades desacopladas."
+                },
+                {
+                    "type": "title",
+                    "content": "Backend"
+                },
+                {
+                    "type": "text",
+                    "content": "El backend fue desarrollado en Node.js con Express e integra dos motores de base de datos. MongoDB se utiliza para la gestión de usuarios y relaciones sociales, mientras que PostgreSQL se emplea para el manejo de posteos, optimizando cada caso según el tipo de información."
+                },
+                {
+                    "type": "title",
+                    "content": "Aplicación móvil"
+                },
+                {
+                    "type": "text",
+                    "content": "La aplicación Android está desarrollada en Kotlin con Jetpack Compose. Soporta distintos factores de forma y adapta su interfaz para teléfonos, dispositivos foldable y tablets."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-botanist2.png",
                     "alt": "Diseño mobile"
-				},
-				{
-					"type": "title",
-					"content": "Diseño foldable"
-				},
-				{
-					"type": "image",
-					"content": "/images/project-botanist3.png",
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-botanist3.png",
                     "alt": "Diseño foldable"
-				},
-				{
-					"type": "title",
-					"content": "Diseño tablets"
-				},
-				{
-					"type": "image",
-					"content": "/images/project-botanist4.png",
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-botanist4.png",
                     "alt": "Diseño tablets"
-				}
+                }
             ]
         }
     },
     {
         "id": 2,
         "title": "Sistema Siete Colores",
-        "description": "Sistema de gestión de presupuestos y stock",
-        "technologies": ["TS", "REACT", "NODEJS", "EXPRESS", "MONGODB"],
+        "description": "Sistema de gestión de stock y presupuestos",
+        "technologies": [
+            "TS",
+            "REACT",
+            "NODEJS",
+            "EXPRESS",
+            "MONGODB"
+        ],
         "images": [
             "/images/project-siete-colores1.png"
         ],
         "structure": {
-            "longDescription": "Sistema para gestionar productos para una empresa familiar de producción de herramientas para artesanía.",
+            "longDescription": "Sistema de gestión diseñado para una empresa familiar dedicada a la producción de herramientas para artesanía.",
             "elements": [
                 {
                     "type": "title",
@@ -217,35 +242,35 @@
                 },
                 {
                     "type": "title",
-                    "content": "Notas"
+                    "content": "Alcance funcional"
                 },
                 {
                     "type": "text",
-                    "content": "Es un sistema de gestión de productos, cálculo de cuentas frecuentes como porcentajes de aumentos, generación de presupuestos y estadísticas."
+                    "content": "El sistema centraliza la gestión de productos, stock y precios, permite generar presupuestos personalizados en PDF y ofrece herramientas de cálculo para actualizaciones masivas."
                 },
                 {
                     "type": "title",
-                    "content": "El backend"
+                    "content": "Backend"
                 },
                 {
                     "type": "text",
-                    "content": "Del lado del servidor, tengo un backend hecho en Node.js (Express) que utiliza una base de datos no relacional, con patron repositorio y clean architecture."
+                    "content": "El backend fue desarrollado en Node.js con Express y MongoDB. Se apoya en principios de Clean Architecture, priorizando la separación de responsabilidades, la extensibilidad y la mantenibilidad."
                 },
                 {
                     "type": "title",
-                    "content": "El frontend"
+                    "content": "Frontend"
                 },
                 {
                     "type": "text",
-                    "content": "Del lado del usuario, cuenta con una app en React consumiida por Electron. Se utilizó un patrón MVVM para la arquitectura del frontend."
+                    "content": "El frontend está construido en React y distribuido como aplicación de escritorio mediante Electron. La arquitectura sigue un enfoque MVVM para organizar la lógica de presentación."
                 },
                 {
                     "type": "title",
-                    "content": "Editor de productos"
+                    "content": "Módulos principales"
                 },
                 {
                     "type": "text",
-                    "content": "El sistema cuenta con un editor de productos, donde se pueden agregar, editar y eliminar productos."
+                    "content": "Incluye editores de productos y categorías, un generador de presupuestos y herramientas específicas para operaciones comerciales recurrentes."
                 },
                 {
                     "type": "image",
@@ -254,60 +279,13 @@
                 },
                 {
                     "type": "image",
-                    "content": "/images/project-siete-colores7.png",
-                    "alt": "Editor de productos"
-                },
-                {
-                    "type": "title",
-                    "content": "Editor de categorías"
-                },
-                {
-                    "type": "text",
-                    "content": "El sistema cuenta con un editor de categorías, donde se pueden agregar, editar y eliminar categorías."
-                },
-                {
-                    "type": "image",
                     "content": "/images/project-siete-colores3.png",
                     "alt": "Editor de categorías"
-                },
-                {
-                    "type": "title",
-                    "content": "Creador de presupuestos"
-                },
-                {
-                    "type": "text",
-                    "content": "El sistema es capaz de generar presupuestos, con un formato personalizado, y generar un PDF con el presupuesto."
                 },
                 {
                     "type": "image",
                     "content": "/images/project-siete-colores4.png",
                     "alt": "Creador de presupuestos"
-                },
-                {
-                    "type": "title",
-                    "content": "Estadísticas"
-                },
-                {
-                    "type": "text",
-                    "content": "El sistema cuenta con estadísticas generadas mes a mes."
-                },
-                {
-                    "type": "image",
-                    "content": "/images/project-siete-colores6.png",
-                    "alt": "Estadísticas"
-                },
-                {
-                    "type": "title",
-                    "content": "Herramientas"
-                },
-                {
-                    "type": "text",
-                    "content": "El sistema cuenta con herramientas para calcular porcentajes de aumentos, y para actualizar precios en cantidad."
-                },
-                {	
-                    "type": "image",
-                    "content": "/images/project-siete-colores2.png",
-                    "alt": "Herramientas"
                 }
             ]
         }
@@ -315,23 +293,16 @@
     {
         "id": 3,
         "title": "Siete Colores Web",
-        "description": "Catálogo web de herramientas para artesanía",
-        "technologies": ["TS", "REACT"],
+        "description": "Catálogo web con carrito de compras",
+        "technologies": [
+            "TS",
+            "REACT"
+        ],
         "images": [
             "/images/project-siete-colores-web1.png"
         ],
-        "links": [
-            {
-                "name": "Repositorio",
-                "url": "https://github.com/2piradrian/siete-colores-web"
-            },
-            {
-                "name": "Sitio Web",
-                "url": "https://sietecolores3d.com.ar/"
-            }
-        ],
         "structure": {
-            "longDescription": "Catálogo web de herramientas para artesanía, con carrito de compras.",
+            "longDescription": "Catálogo web orientado a la exhibición y venta de herramientas para artesanía.",
             "elements": [
                 {
                     "type": "title",
@@ -349,53 +320,24 @@
                 },
                 {
                     "type": "title",
-                    "content": "Notas"
+                    "content": "Descripción"
                 },
                 {
                     "type": "text",
-                    "content": "Es un e-commerce de herramientas para artesanía, con carrito de compras y finalización en whatsapp con su API."
+                    "content": "Aplicación web desarrollada en React que funciona como catálogo de productos, incorpora buscador, carrito de compras y cierre de pedidos mediante integración con la API de WhatsApp."
                 },
                 {
                     "type": "title",
-                    "content": "Aprendizaje"
+                    "content": "Decisiones técnicas"
                 },
                 {
                     "type": "text",
-                    "content": "Este proyecto me permitió aprender a hacer un catálogo web desde cero, fue de mis primeros proyectos, por lo que ha pasado por bastantes cambios."
-                },
-                {
-                    "type": "title",
-                    "content": "Excepción"
-                },
-                {
-                    "type": "text",
-                    "content": "En lugar de consumir un api, lee desde un JSON porque el cliente lo prefería así."
-                },
-                {
-                    "type": "title",
-                    "content": "Página de inicio"
-                },
-                {
-                    "type": "text",
-                    "content": "Catalogo web de productos, con un buscador y un carrito de compras."
+                    "content": "En lugar de consumir una API, el catálogo se alimenta desde un archivo JSON, decisión tomada en función de los requerimientos operativos del cliente."
                 },
                 {
                     "type": "image",
                     "content": "/images/project-siete-colores-web4.png",
-                    "alt": "Pagina de inicio"
-                },
-                {
-                    "type": "image",
-                    "content": "/images/project-siete-colores-web3.png",
-                    "alt": "Pagina de inicio"
-                },
-                {
-                    "type": "title",
-                    "content": "Carrito de compras"
-                },
-                {
-                    "type": "text",
-                    "content": "El web cuenta con un carrito de compras, donde se pueden agregar y eliminar productos."
+                    "alt": "Página de inicio"
                 },
                 {
                     "type": "image",
@@ -408,19 +350,19 @@
     {
         "id": 4,
         "title": "Music Forum",
-        "description": "Backend con arquitectura de microservicios",
-        "technologies": ["SPRINGBOOT", "POSTGRESQL", "MONGODB", "JAVA"],
+        "description": "Backend basado en microservicios",
+        "technologies": [
+            "SPRING BOOT",
+            "SPRING CLOUD",
+            "JAVA",
+            "POSTGRESQL",
+            "MONGODB"
+        ],
         "images": [
             "/images/project-music-forum1.png"
         ],
-        "links": [
-            {
-                "name": "Repositorio",
-                "url": "https://github.com/2piradrian/musicforum-microservices"
-            }
-        ],
         "structure": {
-            "longDescription": "Backend con arquitectura de microservicios, para un foro de música.",
+            "longDescription": "Backend diseñado con arquitectura de microservicios para una plataforma de foro musical.",
             "elements": [
                 {
                     "type": "title",
@@ -433,35 +375,27 @@
                 },
                 {
                     "type": "title",
-                    "content": "Notas"
-                },
-                {
-                    "type": "text",
-                    "content": "El proyecto es solo backend, implementando microservicios con Spring Boot & Spring Cloud, MongoDB y PostgreSQL."
-                },
-                {
-                    "type": "title",
                     "content": "Arquitectura"
                 },
                 {
                     "type": "text",
-                    "content": "Utilicé Clean Architecture en el desarrollo independiente de cada microservicio. Además hice una librería de utilidades para compartir entre los microservicios."
+                    "content": "El sistema está compuesto por múltiples microservicios independientes desarrollados con Spring Boot y Spring Cloud, cada uno aplicando principios de Clean Architecture."
                 },
                 {
                     "type": "title",
-                    "content": "Microservicios críticos"
+                    "content": "Infraestructura base"
                 },
                 {
                     "type": "text",
-                    "content": "El primero es el 'registry-server' que es el servidor de registro de los microservicios, pensado para que los microservicios puedan registrarse y descubrirse entre ellos. Luego está el 'gateway-server' que es el servidor de puerta de enlace, que es el encargado de enrutar las peticiones a los microservicios correspondientes."
+                    "content": "Incluye un registry-server para el descubrimiento de servicios y un gateway-server encargado del enrutamiento y la exposición de la API."
                 },
                 {
                     "type": "title",
-                    "content": "Microservicios de funcionalidad"
+                    "content": "Servicios de dominio"
                 },
                 {
                     "type": "text",
-                    "content": "Luego, los que resuelven el problema de dominio, y brindan la lógica de negocio a la app son 4 microservicios que son 'auth-service', 'forum-service' y 'report-server'. Estos resuelven la autenticación, el foro y comentarios de los mismos, y los reportes respectivamente."
+                    "content": "Los microservicios principales cubren autenticación, gestión de foros y comentarios, y generación de reportes, utilizando PostgreSQL y MongoDB según el caso de uso."
                 }
             ]
         }
