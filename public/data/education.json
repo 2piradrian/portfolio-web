@@ -7,19 +7,19 @@
     },
     {
         "id": 1,
-        "name": "Full Stack M.E.R.N. Development",
+        "name": "Full Stack M.E.R.N.",
         "institution": "Nucba",
         "date": "Mar. 2022 - Jul. 2023"
     },
     {
         "id": 2,
-        "name": "Node.js: Backend Development",
+        "name": "Node.js: Backend",
         "institution": "DevTalles",
         "date": "Ene. 2024 - Mar. 2024"
     },
     {
         "id": 3,
-        "name": "Java & Spring Boot: Backend Development",
+        "name": "Java & Spring Boot: Backend",
         "institution": "Coderhouse",
         "date": "Ene. 2023 - Abr. 2023"
     }

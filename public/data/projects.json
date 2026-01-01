@@ -130,92 +130,6 @@
     },
     {
         "id": 1,
-        "title": "Botanist",
-        "description": "Red social enfocada en plantas",
-        "technologies": [
-            "KOTLIN",
-            "COMPOSE",
-            "TS",
-            "NODEJS",
-            "EXPRESS",
-            "MONGODB",
-            "POSTGRESQL"
-        ],
-        "images": [
-            "/images/project-botanist1.png",
-            "/images/project-botanist2.png",
-            "/images/project-botanist3.png",
-            "/images/project-botanist4.png"
-        ],
-        "structure": {
-            "longDescription": "Red social orientada a la comunidad, diseñada para compartir contenido, experiencias y conocimientos relacionados con el cuidado de plantas.",
-            "elements": [
-                {
-                    "type": "title",
-                    "content": "Links"
-                },
-                {
-                    "type": "link",
-                    "content": "Repositorio App",
-                    "url": "https://github.com/2piradrian/botanist-app"
-                },
-                {
-                    "type": "link",
-                    "content": "Repositorio Backend",
-                    "url": "https://github.com/2piradrian/botanist-backend"
-                },
-                {
-                    "type": "title",
-                    "content": "Alcance del proyecto"
-                },
-                {
-                    "type": "text",
-                    "content": "Botanist es un MVP de red social que implementa las funcionalidades centrales del dominio: gestión de usuarios, publicaciones, sistema de likes y relaciones de seguimiento."
-                },
-                {
-                    "type": "title",
-                    "content": "Arquitectura"
-                },
-                {
-                    "type": "text",
-                    "content": "Tanto el backend como la aplicación móvil fueron diseñados aplicando principios de Clean Architecture, con capas bien definidas y responsabilidades desacopladas."
-                },
-                {
-                    "type": "title",
-                    "content": "Backend"
-                },
-                {
-                    "type": "text",
-                    "content": "El backend fue desarrollado en Node.js con Express e integra dos motores de base de datos. MongoDB se utiliza para la gestión de usuarios y relaciones sociales, mientras que PostgreSQL se emplea para el manejo de posteos, optimizando cada caso según el tipo de información."
-                },
-                {
-                    "type": "title",
-                    "content": "Aplicación móvil"
-                },
-                {
-                    "type": "text",
-                    "content": "La aplicación Android está desarrollada en Kotlin con Jetpack Compose. Soporta distintos factores de forma y adapta su interfaz para teléfonos, dispositivos foldable y tablets."
-                },
-                {
-                    "type": "image",
-                    "content": "/images/project-botanist2.png",
-                    "alt": "Diseño mobile"
-                },
-                {
-                    "type": "image",
-                    "content": "/images/project-botanist3.png",
-                    "alt": "Diseño foldable"
-                },
-                {
-                    "type": "image",
-                    "content": "/images/project-botanist4.png",
-                    "alt": "Diseño tablets"
-                }
-            ]
-        }
-    },
-    {
-        "id": 2,
         "title": "Sistema Siete Colores",
         "description": "Sistema de gestión de stock y presupuestos",
         "technologies": [
@@ -226,7 +140,7 @@
             "MONGODB"
         ],
         "images": [
-            "/images/project-siete-colores1.png"
+            "/images/project-siete-colores3.png"
         ],
         "structure": {
             "longDescription": "Sistema de gestión diseñado para una empresa familiar dedicada a la producción de herramientas para artesanía.",
@@ -291,15 +205,15 @@
         }
     },
     {
-        "id": 3,
-        "title": "Siete Colores Web",
+        "id": 2,
+        "title": "Web Siete Colores",
         "description": "Catálogo web con carrito de compras",
         "technologies": [
             "TS",
             "REACT"
         ],
         "images": [
-            "/images/project-siete-colores-web1.png"
+            "/images/project-siete-colores-web5.png"
         ],
         "structure": {
             "longDescription": "Catálogo web orientado a la exhibición y venta de herramientas para artesanía.",
@@ -341,14 +255,19 @@
                 },
                 {
                     "type": "image",
-                    "content": "/images/project-siete-colores-web2.png",
+                    "content": "/images/project-siete-colores-web5.png",
+                    "alt": "Catálogo"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores-web6.png",
                     "alt": "Carrito de compras"
                 }
             ]
         }
     },
     {
-        "id": 4,
+        "id": 3,
         "title": "Music Forum",
         "description": "Backend basado en microservicios",
         "technologies": [
@@ -359,7 +278,7 @@
             "MONGODB"
         ],
         "images": [
-            "/images/project-music-forum1.png"
+            "/images/project-music-forum-2.jpg"
         ],
         "structure": {
             "longDescription": "Backend diseñado con arquitectura de microservicios para una plataforma de foro musical.",
@@ -396,6 +315,57 @@
                 {
                     "type": "text",
                     "content": "Los microservicios principales cubren autenticación, gestión de foros y comentarios, y generación de reportes, utilizando PostgreSQL y MongoDB según el caso de uso."
+                }
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "title": "Distributor",
+        "description": "Dummy project para exhibición de documentación y arquitectura",
+        "technologies": [
+            "KOTLIN",
+            "SPRINGBOOT",
+            "POSTGRESQL"
+        ],
+        "images": [
+            "/images/software-architectures.webp"
+        ],
+        "structure": {
+            "longDescription": "Proyecto ficticio desarrollado con el propósito de demostrar buenas prácticas en documentación y arquitectura de software.",
+            "elements": [
+                {
+                    "type": "title",
+                    "content": "Links"
+                },
+                {
+                    "type": "link",
+                    "content": "Repositorio",
+                    "url": "https://github.com/2piradrian/distributor-server"
+                },
+                {
+                    "type": "title",
+                    "content": "Objetivo del proyecto"
+                },
+                {
+                    "type": "text",
+                    "content": "El proyecto simula un sistema de gestión para una empresa distribuidora, sirviendo como caso de estudio para la aplicación de principios de diseño y documentación técnica."
+                },
+                {
+                    "type": "title",
+                    "content": "Documentación"
+                },
+                {
+                    "type": "text",
+                    "content": "Se incluye documentación detallada que abarca diagramas UML, tanto de secuencia como de clases."
+                },
+                {
+                    "type": "title",
+                    "content": "Arquitectura"
+                },
+                {
+                    "type": "text",
+                    "content": "El sistema está construido siguiendo principios de Clean Architecture, enfatizando la separación de responsabilidades y la mantenibilidad del código, orientado a casos de uso."
                 }
             ]
         }

@@ -1,6 +1,13 @@
 [
     {
         "id": 0,
+        "position": "Software Developer",
+        "company": "Nesus | Arena Hnos.",
+        "description": "Desarrollo un sistema de información para gestión de ordenes de producción y de inventario para una fábrica de adoquines. El sistema es construido con un enfoque estricto en Clean Architecture y principios de diseño, orientado a casos de uso, utilizando Java con Spring Boot en el backend y React en el frontend. Además, mantengo la documentación del sistema con UML.",
+        "date": "Dic. 2025 - Actualidad"
+    },
+    {
+        "id": 1,
         "position": "Data Automation & Analytics",
         "company": "Nesus",
         "description": "Desarrollo scripts en Python para automatizar procesos repetitivos relacionados con la generación de reportes, facilitando el trabajo de los analistas de datos. Esto incluye scraping de datos, consumo de APIs, lectura desde archivos Excel o CSV, y realización de cálculos para obtener información relevante. También colaboro en la construcción de dashboards en Power BI.",
