@@ -3,7 +3,7 @@
         "id": 0,
         "position": "Software Developer",
         "company": "Nesus | Arena Hnos.",
-        "description": "Desarrollo un sistema de información para gestión de ordenes de producción y de inventario para una fábrica de adoquines. El sistema es construido con un enfoque estricto en Clean Architecture y principios de diseño, orientado a casos de uso, utilizando Java con Spring Boot en el backend y React en el frontend. Además, mantengo la documentación del sistema con UML.",
+        "description": "Desarrollo un sistema de información para gestión de procesos productivos, conciliación y de auditoría para una fábrica de adoquines. El sistema es construido con un enfoque estricto en Clean Architecture y principios de diseño, orientado a casos de uso, utilizando Java con Spring Boot en el backend y React en el frontend. Además, mantengo la documentación del sistema con UML.",
         "date": "Dic. 2025 - Actualidad"
     },
     {
