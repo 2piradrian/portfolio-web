@@ -11,7 +11,7 @@ export default function Hero() {
 				Adrián Rodriguez
 			</h1>
 			<p className={style.about}>
-				Desarrollador de Software | Estudiante de ingeniería
+				Analista Desarrollador de Software | Estudiante de ingeniería
 			</p>
 			<div className={style.location}>
 				<Image src={world} alt="Residencia" />
