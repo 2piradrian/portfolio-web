@@ -321,7 +321,7 @@
     },
     {
         "id": 4,
-        "title": "Distributor",
+        "title": "Ecommerce",
         "description": "Dummy project para exhibición de documentación y arquitectura",
         "technologies": [
             "KOTLIN",
@@ -341,7 +341,7 @@
                 {
                     "type": "link",
                     "content": "Repositorio",
-                    "url": "https://github.com/2piradrian/distributor-server"
+                    "url": "https://github.com/2piradrian/ecommerce-server"
                 },
                 {
                     "type": "title",
@@ -349,7 +349,7 @@
                 },
                 {
                     "type": "text",
-                    "content": "El proyecto simula un sistema de gestión para una empresa distribuidora, sirviendo como caso de estudio para la aplicación de principios de diseño y documentación técnica."
+                    "content": "El proyecto es un template para la construcción de ecommerces, sirviendo como caso de estudio para la aplicación de principios de diseño y documentación técnica."
                 },
                 {
                     "type": "title",
