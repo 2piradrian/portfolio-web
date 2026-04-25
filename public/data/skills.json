@@ -5,6 +5,7 @@
             "Java",
             "Kotlin",
             "Spring Boot",
+            "Spring Cloud",
             "TypeScript",
             "React"
         ]
@@ -15,9 +16,11 @@
             "Java",
             "Kotlin",
             "Spring Boot",
+            "Spring Cloud",
             "TypeScript",
             "Node",
-            "Express"
+            "Express",
+            "Microservicios"
         ]
     },
     {
