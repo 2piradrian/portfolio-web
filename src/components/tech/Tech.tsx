@@ -41,6 +41,8 @@ export default function Tech({ tech }: Props) {
 			return <Image src={getImagePath("docker")} alt="" />;
 		case "PYTHON":
 			return <Image src={getImagePath("python")} alt="" />;
+		case "C":
+			return <Image src={getImagePath("c")} alt="" />;
 		default:
 			return <span>{tech}</span>;
 	}

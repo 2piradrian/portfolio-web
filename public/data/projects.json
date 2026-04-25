@@ -131,15 +131,16 @@
     {
         "id": 1,
         "title": "Ayudante de Santa",
-        "description": "Sistema de cultivos automatizados",
+        "description": "Sistema de IoT para automatización de cultivos",
         "technologies": [
+            "C",
             "KOTLIN",
             "COMPOSE",
             "TS",
             "NODEJS",
             "EXPRESS",
             "MONGODB",
-            "C"
+            "DOCKER"
         ],
         "images": [
             "/images/project-ads1.png",
@@ -147,112 +148,198 @@
             "/images/project-ads3.png"
         ],
         "structure": {
-            "longDescription": "Plataforma integral de automatización de cultivos, orientada al control remoto y monitoreo de variables ambientales como humedad, temperatura, iluminación y riego.",
+            "longDescription": "Este sistema permite automatizar el cuidado de cultivos mediante el monitoreo y control de variables ambientales. El proyecto consistió en construir la solución completa: desde el diseño del circuito electrónico y la programación del firmware en C, hasta el desarrollo de una API para la gestión de datos y una aplicación móvil que se comunica con el hardware para ofrecer control total al usuario.",
             "elements": [
                 {
                     "type": "title",
-                    "content": "Links"
-                },
-                {
-                    "type": "link",
-                    "content": "Web",
-                    "url": "https://ayudantedesanta.com.ar"
-                },
-                {
-                    "type": "link",
-                    "content": "Google Play Store",
-                    "url": "https://play.google.com/store/apps/details?id=com.twopiradrian.ads"
-                },
-                {
-                    "type": "link",
-                    "content": "Instagram",
-                    "url": "https://www.instagram.com/ayudantedsok/"
-                },
-                {
-                    "type": "title",
-                    "content": "Contexto del proyecto"
+                    "content": "Firmware: Ingeniería de Bajo Nivel"
                 },
                 {
                     "type": "text",
-                    "content": "Ayudante de Santa es un proyecto orientado a producto, actualmente en desarrollo con fines comerciales. Por este motivo, el código fuente no es público."
+                    "content": "Desarrollado en C para microcontroladores ESP32, el firmware se enfoca en la eficiencia de recursos. Se aplicaron Mapas de Karnaugh para optimizar la toma de decisiones del hardware. Esta técnica de ingeniería electrónica permite simplificar funciones booleanas complejas: se parte de una tabla de verdad con todas las combinaciones posibles de sensores y, mediante la agrupación visual de estados en un mapa bidimensional, se obtiene la expresión lógica mínima. Esto permite resolver el control de actuadores (como riego o ventilación) con evaluaciones de una sola línea, eliminando múltiples 'if/else' anidados y ahorrando ciclos de CPU y memoria RAM."
                 },
                 {
-                    "type": "title",
-                    "content": "Arquitectura general"
-                },
-                {
-                    "type": "text",
-                    "content": "El sistema está compuesto por tres capas bien definidas: un firmware embebido para el control físico del dispositivo, un backend centralizado para la gestión de datos y lógica de negocio, y una aplicación móvil para la interacción del usuario final."
-                },
-                {
-                    "type": "title",
-                    "content": "Firmware"
+                    "type": "code",
+                    "language": "cpp",
+                    "content": "// Optimización lógica mediante booleanos (Karnaugh)\n// a: habilitado, b: umbral temp, c: estado actual, d: target alcanzado\nconst bool a = wind.isEnabled && wind.days[dayOfWeek];\nconst bool b = measurements->temperature >= wind.temperature;\nconst bool c = control->fanState;\nconst bool d = control->fanTarget;\n\nif ((a && c && !d) || (a && b && !c)) {\n    gpio_set_level(pin, status.ON);\n    // ... activación eficiente de actuadores\n}"
                 },
                 {
                     "type": "text",
-                    "content": "El firmware del microcontrolador fue desarrollado en C. Se encarga de la lectura de sensores, el control de actuadores (riego, iluminación y ventilación) y la comunicación con el backend para el envío de métricas y recepción de configuraciones."
+                    "content": "Para estructurar el código, se emularon clases mediante structs y punteros a funciones, aplicando el patrón Singleton para asegurar que cada módulo de hardware tuviera una única instancia en memoria, minimizando el stack de ejecución."
+                },
+                {
+                    "type": "code",
+                    "language": "cpp",
+                    "content": "// Emulación de clases y Singleton en C\ntypedef struct {\n    struct PinOut pinout;\n    struct Config config;\n    void (*setDefaultConfig)(...);\n    struct Auth (*getAuth)(void);\n    // ... punteros a funciones como métodos\n} Device;\n\nDevice *device_init(void) {\n    if (device == NULL) {\n        device = malloc(sizeof(Device));\n        // ... inicialización única\n    }\n    return device;\n}"
                 },
                 {
                     "type": "title",
-                    "content": "Backend"
+                    "content": "IoT: Actualizaciones Remotas (OTA)"
                 },
                 {
                     "type": "text",
-                    "content": "El backend está desarrollado en Node.js con Express y utiliza MongoDB como base de datos. Centraliza la lógica de negocio, el almacenamiento histórico de datos ambientales, la gestión de usuarios y dispositivos, y el envío de notificaciones."
+                    "content": "El sistema integra un ciclo de vida completo de mantenimiento remoto mediante actualizaciones OTA (Over-The-Air). El firmware consulta periódicamente al backend por nuevas versiones; si existe una actualización compatible, el backend genera una URL temporal firmada para que el dispositivo descargue el nuevo binario de forma segura y se reinicie automáticamente, garantizando que el hardware evolucione sin intervención física."
+                },
+                {
+                    "type": "code",
+                    "language": "typescript",
+                    "content": "// Backend: Gestión de versiones y URLs firmadas para OTA\npublic async updateIndoor(dto: UpdateIndoorDTO) {\n    const firmware = await this.firmwareRepository.getBySerie(serie);\n    if (isNewer(dto.version, firmware.version)) {\n        // Generación de URL temporal con token JWT para descarga segura\n        const updateUrl = await this.generateTempUrl(filePath);\n        return { updateUrl };\n    }\n    throw ErrorHandler.badRequest(ErrorType.FirmwareAlreadyUpdated);\n}"
                 },
                 {
                     "type": "title",
-                    "content": "Aplicación móvil"
+                    "content": "Comunicación Local: TCP/IP Server"
                 },
                 {
                     "type": "text",
-                    "content": "La aplicación Android fue desarrollada en Kotlin utilizando Jetpack Compose. Permite visualizar métricas en tiempo real, configurar parámetros del sistema y gestionar múltiples dispositivos desde una única interfaz."
+                    "content": "El dispositivo integra un servidor TCP sockets propio, permitiendo que la aplicación móvil se comunique directamente con el hardware sin latencia de internet cuando están en la misma red local, utilizando un protocolo de mensajería ligero en JSON."
+                },
+                {
+                    "type": "code",
+                    "language": "cpp",
+                    "content": "// Servidor TCP nativo para comunicación de baja latencia\nint serverSocket = socket(AF_INET, SOCK_STREAM, 0);\nbind(serverSocket, (struct sockaddr *)&serverAddr, sizeof(serverAddr));\nlisten(serverSocket, 1);\n\n// Aceptación de conexiones locales de la App\nclientSocket = accept(serverSocket, (...));\nread(clientSocket, buffer, 1024);\nif (strncmp(buffer, \"GET /measurements\", 17) == 0) {\n    write(clientSocket, response, strlen(response));\n}"
+                },
+                {
+                    "type": "title",
+                    "content": "Mobile y Backend: Sincronización Híbrida"
+                },
+                {
+                    "type": "text",
+                    "content": "La App (Kotlin/Compose) implementa una lógica de sincronización inteligente: prioriza la conexión TCP local para inmediatez y recurre a la API REST (Node.js) para control remoto fuera del hogar. El backend gestiona además el versionado y distribución de actualizaciones de firmware (OTA)."
+                },
+                {
+                    "type": "code",
+                    "language": "kotlin",
+                    "content": "// Sincronización híbrida en Mobile\noverride suspend fun updateConfig(token: String, request: Request): Response {\n    val tcpResponse = this.device.updateConfig(request) // Intento local\n    if (tcpResponse.success) {\n        return this.api.updateConfig(token, request.copy(updatedNow = true))\n    }\n    return this.api.updateConfig(token, request) // Fallback a Cloud\n}"
+                },
+                {
+                    "type": "title",
+                    "content": "Provisión de WiFi: Servidor HTTP y Lógica de Persistencia"
+                },
+                {
+                    "type": "text",
+                    "content": "Cuando el dispositivo no detecta credenciales válidas, levanta un Access Point (SoftAP) y un servidor HTTP nativo. El firmware gestiona el ciclo completo de configuración: recibe la petición POST del usuario, parsea y decodifica las credenciales mediante lógica personalizada, las persiste en la memoria no volátil (NVS) y orquesta un reinicio controlado del hardware para validar la nueva conexión a la red local."
+                },
+                {
+                    "type": "code",
+                    "language": "cpp",
+                    "content": "// Lógica de procesamiento de credenciales y persistencia\nstatic esp_err_t dataHandler(httpd_req_t *req) {\n    char content[200];\n    int ret = httpd_req_recv(req, content, sizeof(content) - 1);\n    content[ret] = '\\0';\n\n    char ssid[32] = {0}, password[64] = {0};\n    sscanf(content, \"ssid=%31[^&]&password=%63s\", ssid, password);\n\n    // Decodificación y persistencia en memoria no volátil (NVS)\n    decodeUrlString(ssid);\n    decodeUrlString(password);\n    device->setWiFiCredentials(ssid, password);\n\n    // Feedback en display y reinicio del hardware\n    display->message(\"Guardado\", \"correctamente\");\n    vTaskDelay(4000 / portTICK_PERIOD_MS);\n    esp_restart();\n\n    return ESP_OK;\n}"
+                },
+                {
+                    "type": "title",
+                    "content": "Mobile App: Modernidad y Reactividad"
+                },
+                {
+                    "type": "text",
+                    "content": "La aplicación Android, desarrollada íntegramente en Kotlin con Jetpack Compose, sigue el patrón MVVM para una gestión de estado predecible y reactiva. Los ViewModels encapsulan la lógica de sincronización (Polling), mientras que la UI se construye de forma declarativa, permitiendo una experiencia de usuario fluida y desacoplada de la infraestructura."
+                },
+                {
+                    "type": "code",
+                    "language": "kotlin",
+                    "content": "// ViewModel: Gestión reactiva del estado y sincronización (Polling)\nclass IndoorViewModel(private val indoorUseCase: IndoorUseCase) : ViewModel() {\n    private val _indoorState = MutableStateFlow<Indoor?>(null)\n    val indoorState: StateFlow<Indoor?> = _indoorState\n\n    private fun startPolling() {\n        pollingExecutor.scheduleWithFixedDelay({ \n            viewModelScope.launch { getMeasurement() }\n        }, 0, 3, TimeUnit.SECONDS)\n    }\n}"
+                },
+                {
+                    "type": "code",
+                    "language": "kotlin",
+                    "content": "// UI Declarativa con Jetpack Compose\n@Composable\nfun IndoorScreen(viewModel: IndoorViewModel) {\n    val indoorState by viewModel.indoorState.collectAsState()\n\n    AppLayout(title = R.string.indoor) {\n        indoorState?.let {\n            IndoorBody(indoorState = it, viewModel = viewModel)\n        } ?: LoadingBox()\n    }\n}"
+                },
+                {
+                    "type": "title",
+                    "content": "Inyección de Dependencias: ViewModelProvider"
+                },
+                {
+                    "type": "text",
+                    "content": "Para gestionar la complejidad de las dependencias en Android, se desarrolló un ViewModelProvider personalizado. Esta clase centraliza la creación de todos los ViewModels del sistema, inyectando los casos de uso y contenedores de la aplicación mediante Factories personalizadas. Este enfoque desacopla la UI de la instanciación de la lógica de negocio, facilitando el mantenimiento y la escalabilidad del proyecto."
+                },
+                {
+                    "type": "code",
+                    "language": "kotlin",
+                    "content": "// Proveedor centralizado de ViewModels con Inyección de Dependencias\nclass ViewModelProvider(\n    private val appContainer: AppContainer,\n    private val useCase: UseCase,\n) {\n    @Composable\n    fun indoor(navBackStackEntry: NavBackStackEntry): IndoorViewModel {\n        return viewModel(\n            modelClass = IndoorViewModel::class.java,\n            factory = IndoorViewModelFactory(\n                useCase = useCase,\n                appContainer = appContainer,\n            ),\n            viewModelStoreOwner = navBackStackEntry\n        )\n    }\n}"
+                },
+                {
+                    "type": "title",
+                    "content": "Backend: Integridad de Datos con DTOs"
+                },
+                {
+                    "type": "text",
+                    "content": "En el backend, se priorizó la integridad de los datos mediante el uso estricto de Data Transfer Objects (DTOs). Cada petición es validada en el controlador antes de llegar al servicio, asegurando que solo información correctamente formateada y segura sea procesada por la lógica de negocio. Esto, sumado al uso de Docker para la contenedorización, garantiza un entorno de ejecución consistente y robusto."
+                },
+                {
+                    "type": "code",
+                    "language": "typescript",
+                    "content": "// Controlador: Validación de entrada mediante DTOs\nupdateConfig = (req: Request, res: Response) => {\n    const [error, dto] = ConfigDTO.create(req.body);\n    if (error) return res.status(400).json({ error });\n\n    this.indoorService.updateConfig(dto!)\n        .then(() => res.status(200).json({ message: 'Config updated' }))\n        .catch(error => ErrorHandler.handle(error, req, res));\n}"
+                },
+                {
+                    "type": "title",
+                    "content": "Backend: Infraestructura Escalable y POO"
+                },
+                {
+                    "type": "text",
+                    "content": "El backend, construido con Node.js y Express, adopta un enfoque estrictamente orientado a objetos. Se implementó una arquitectura de capas (Routes, Controllers, Services, Repositories) con inyección de dependencias para asegurar la mantenibilidad. La seguridad se gestiona mediante middlewares personalizados para la validación de tokens JWT y roles de administración."
+                },
+                {
+                    "type": "code",
+                    "language": "typescript",
+                    "content": "// Estructura de Rutas y Middlewares\nexport class IndoorRoutes {\n    static get routes(): Router {\n        const router = Router();\n        const controller = new IndoorController();\n\n        // Protección de rutas mediante middleware\n        router.get('/get-list', [AuthMiddleware.checkToken], controller.getList);\n        router.put('/config', [AuthMiddleware.checkToken], controller.updateConfig);\n\n        return router;\n    }\n}"
+                },
+                {
+                    "type": "text",
+                    "content": "Para la persistencia se utilizó MongoDB, aprovechando su modelo orientado a documentos para almacenar configuraciones de hardware altamente flexibles y estructuras de historial de mediciones complejas, gestionadas eficientemente a través de Mongoose."
+                },
+                {
+                    "type": "code",
+                    "language": "typescript",
+                    "content": "// Modelo de Datos flexible con MongoDB/Mongoose\nconst indoorSchema = new mongoose.Schema({\n    config: {\n        mode: Boolean,\n        waterConfig: { isEnabled: Boolean, days: [Boolean], temperature: Number },\n        lightConfig: { isEnabled: Boolean, days: [Boolean], schedules: [Number] },\n        // ... configuraciones dinámicas de hardware\n    },\n    measurements: { temperature: Number, humidity: Number },\n    syncedAt: { type: Date, default: null }\n});"
+                },
+                {
+                    "type": "title",
+                    "content": "Gestión de Memoria y Optimización de Recursos"
+                },
+                {
+                    "type": "text",
+                    "content": "Al trabajar en sistemas embebidos sin Garbage Collector, se priorizó una gestión manual y quirúrgica de la memoria. Se utilizaron tipos de datos de tamaño fijo para minimizar la ocupación en RAM y se emplearon punteros para el paso de estructuras pesadas por referencia. La liberación constante de memoria dinámica (free) y el control estricto del heap aseguran la estabilidad del dispositivo."
+                },
+                {
+                    "type": "code",
+                    "language": "cpp",
+                    "content": "// 1. Gestión manual de buffers para comunicación TCP\nclientSocket = accept(serverSocket, (...));\nchar *buffer = (char *)malloc(1024); // Asignación dinámica\nint bytesRead = read(clientSocket, buffer, 1024);\n\n// ... procesamiento de datos\n\nclose(clientSocket);\nfree(buffer); // Liberación inmediata para evitar fugas (Memory Leaks)"
+                },
+                {
+                    "type": "code",
+                    "language": "cpp",
+                    "content": "// 2. Tipos de datos optimizados y paso por referencia\n// uint8_t ocupa solo 1 byte (0-255)\nstatic void read(Measurements *measurements) {\n    int rawHumidity = readHumidity();\n    measurements->humidity = (uint8_t)rawHumidity;\n\n    // Uso de punteros para evitar copias costosas en el stack\n    processLargeData(&measurements->buffer);\n}"
+                },
+                {
+                    "type": "code",
+                    "language": "cpp",
+                    "content": "// 3. Emulación de POO mediante Structs y Punteros a Funciones\ntypedef struct {\n    uint8_t temperature;\n    uint8_t humidity;\n    void (*read)(void); // Puntero a función (Método)\n} Measurements;\n\nMeasurements *measurements_init() {\n    Measurements *m = malloc(sizeof(Measurements));\n    m->read = actual_read_implementation;\n    return m;\n}"
+                },
+                {
+                    "type": "title",
+                    "content": "Prototipo a PCB"
+                },
+                {
+                    "type": "text",
+                    "content": "El desarrollo de hardware evolucionó desde prototipos en protoboard hasta el diseño y fabricación de placas de circuito impreso (PCB) a medida. Este proceso permitió miniaturizar el dispositivo, mejorar la estabilidad de las conexiones eléctricas y asegurar la durabilidad del producto final en entornos de cultivo reales."
                 },
                 {
                     "type": "image",
-                    "content": "/images/project-ads5.png",
-                    "alt": "Aplicación móvil"
+                    "content": "/images/project-ads-pcb-1.jpg",
+                    "alt": "Evolución de prototipo a PCB"
                 },
                 {
                     "type": "image",
-                    "content": "/images/project-ads4.png",
-                    "alt": "Aplicación móvil"
+                    "content": "/images/project-ads-pcb-2.jpg",
+                    "alt": "Evolución de prototipo a PCB"
                 },
                 {
                     "type": "image",
-                    "content": "/images/project-ads6.png",
-                    "alt": "Aplicación móvil"
-                },
-                {
-                    "type": "image",
-                    "content": "/images/project-ads7.png",
-                    "alt": "Aplicación móvil"
-                },
-                {
-                    "type": "title",
-                    "content": "Estructura del proyecto"
-                },
-                {
-                    "type": "text",
-                    "content": "El desarrollo se organiza en tres repositorios independientes: uno para la aplicación móvil, otro para el backend y otro para el firmware del microcontrolador, permitiendo una evolución desacoplada de cada componente."
-                },
-                {
-                    "type": "image",
-                    "content": "/images/project-ads3.png",
-                    "alt": "Estructura del proyecto"
-                },
-                {
-                    "type": "title",
-                    "content": "Producto"
-                },
-                {
-                    "type": "text",
-                    "content": "El producto final consiste en un sistema físico de automatización de cultivos integrado con una plataforma digital. El usuario puede monitorear el estado del cultivo, definir reglas de control y recibir alertas, combinando hardware y software en una solución unificada."
+                    "content": "/images/project-ads-pcb-3.jpg",
+                    "alt": "Evolución de prototipo a PCB"
                 },
                 {
                     "type": "image",
                     "content": "/images/project-ads2.png",
-                    "alt": "Producto"
+                    "alt": "Producto Final - Ayudante de Santa"
                 }
             ]
         }
