@@ -1,0 +1,106 @@
+[
+    {
+        "id": 4,
+        "title": "Music Forum",
+        "description": "Backend basado en microservicios",
+        "technologies": [
+            "JAVA",
+            "SPRINGBOOT",
+            "SPRINGCLOUD",
+            "POSTGRESQL",
+            "MONGODB"
+        ],
+        "images": [
+            "/images/project-music-forum-2.jpg"
+        ],
+        "structure": {
+            "longDescription": "Backend diseñado con arquitectura de microservicios para una plataforma de foro musical.",
+            "elements": [
+                {
+                    "type": "title",
+                    "content": "Links"
+                },
+                {
+                    "type": "link",
+                    "content": "Repositorio",
+                    "url": "https://github.com/2piradrian/musicforum-microservices"
+                },
+                {
+                    "type": "title",
+                    "content": "Arquitectura"
+                },
+                {
+                    "type": "text",
+                    "content": "El sistema está compuesto por múltiples microservicios independientes desarrollados con Spring Boot y Spring Cloud, cada uno aplicando principios de Clean Architecture."
+                },
+                {
+                    "type": "title",
+                    "content": "Infraestructura base"
+                },
+                {
+                    "type": "text",
+                    "content": "Incluye un registry-server para el descubrimiento de servicios y un gateway-server encargado del enrutamiento y la exposición de la API."
+                },
+                {
+                    "type": "title",
+                    "content": "Servicios de dominio"
+                },
+                {
+                    "type": "text",
+                    "content": "Los microservicios principales cubren autenticación, gestión de foros y comentarios, y generación de reportes, utilizando PostgreSQL y MongoDB según el caso de uso."
+                }
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "title": "Ecommerce",
+        "description": "Dummy project para exhibición de documentación y arquitectura",
+        "technologies": [
+            "KOTLIN",
+            "SPRINGBOOT",
+            "POSTGRESQL"
+        ],
+        "images": [
+            "/images/software-architectures.webp"
+        ],
+        "structure": {
+            "longDescription": "Proyecto ficticio desarrollado con el propósito de demostrar buenas prácticas en documentación y arquitectura de software.",
+            "elements": [
+                {
+                    "type": "title",
+                    "content": "Links"
+                },
+                {
+                    "type": "link",
+                    "content": "Repositorio",
+                    "url": "https://github.com/2piradrian/ecommerce-server"
+                },
+                {
+                    "type": "title",
+                    "content": "Objetivo del proyecto"
+                },
+                {
+                    "type": "text",
+                    "content": "El proyecto es un template para la construcción de ecommerces, sirviendo como caso de estudio para la aplicación de principios de diseño y documentación técnica."
+                },
+                {
+                    "type": "title",
+                    "content": "Documentación"
+                },
+                {
+                    "type": "text",
+                    "content": "Se incluye documentación detallada que abarca diagramas UML, tanto de secuencia como de clases."
+                },
+                {
+                    "type": "title",
+                    "content": "Arquitectura"
+                },
+                {
+                    "type": "text",
+                    "content": "El sistema está construido siguiendo principios de Clean Architecture, enfatizando la separación de responsabilidades y la mantenibilidad del código, orientado a casos de uso."
+                }
+            ]
+        }
+    }
+]
