@@ -1,6 +1,135 @@
 [
     {
         "id": 0,
+        "title": "Arena",
+        "description": "Sistema ERP/MES para gestión de producción industrial",
+        "technologies": [
+            "JAVA",
+            "SPRINGBOOT",
+            "POSTGRESQL",
+            "TS",
+            "REACT",
+            "DOCKER",
+            "PYTHON"
+        ],
+        "images": [
+            "/images/project-arena-main.png"
+        ],
+        "structure": {
+            "longDescription": "Ecosistema digital diseñado para la gestión integral de una planta de fabricación de adoquines, abarcando desde el control de stock y producción hasta la auditoría y conciliación de datos de maquinaria industrial.",
+            "elements": [
+                {
+                    "type": "image",
+                    "content": "/images/project-arena-main.png",
+                    "alt": "Arena Dashboard"
+                },
+                {
+                    "type": "title",
+                    "content": "Arquitectura Hexagonal (Ports & Adapters)"
+                },
+                {
+                    "type": "text",
+                    "content": "El núcleo del sistema es agnóstico a la tecnología. La lógica reside en los Casos de Uso, que interactúan con el mundo exterior mediante puertos (interfaces), permitiendo cambiar la base de datos o el sistema de archivos sin afectar el negocio."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-arena-server-architecture.png",
+                    "alt": "Arquitectura Hexagonal del Servidor"
+                },
+                {
+                    "type": "title",
+                    "content": "Casos de Uso: Orquestación y Auditoría"
+                },
+                {
+                    "type": "text",
+                    "content": "Cada operación atómica se implementa como un Use Case con el patrón Command/Result. Aquí se observa la orquestación de negocio: un ajuste de stock no solo persiste el dato, sino que dispara de forma atómica otro caso de uso encargado de generar el evento de auditoría, garantizando la trazabilidad total del sistema."
+                },
+                {
+                    "type": "code",
+                    "language": "java",
+                    "content": "@Component\n@Transactional\n@AllArgsConstructor\npublic class UpdateProductStockUseCase {\n\n    private final ProductStockRepositoryI productStockRepository;\n    private final ProductRepositoryI productRepository;\n    private final LocationRepositoryI locationRepository;\n\n    private final AddProductStockEventUseCase addProductStockEventUseCase;\n\n    public record Command(\n            (...)\n    ) {}\n\n    public record Result(\n            (...)\n    ) {}\n\n    public Result execute(Command command) {\n        (...)\n\n        // 4. Update the stock.\n        existing.setQuantity(command.quantity());\n        existing.setUpdatedAt(new Date());\n\n        // 5. Save the stock and event.\n        ProductStock saved = this.productStockRepository.update(existing);\n\n        addProductStockEventUseCase.execute(\n                new AddProductStockEventUseCase.Command(\n                        (...)\n                )\n        );\n\n        // 6. End of Use Case.\n        return new Result(\n                saved\n        );\n    }\n}"
+                },
+                {
+                    "type": "title",
+                    "content": "Optimización: Proyecciones y Mappers"
+                },
+                {
+                    "type": "text",
+                    "content": "Para maximizar el rendimiento, se utilizan proyecciones de JPA que recuperan solo los campos necesarios de la base de datos. Mediante la sobrecarga de funciones en los Mappers, el sistema puede transformar dinámicamente distintos niveles de detalle (Essentials vs Full) hacia la entidad de dominio, optimizando el uso de memoria según el contexto del Caso de Uso."
+                },
+                {
+                    "type": "code",
+                    "language": "java",
+                    "content": "public interface ProductFullProjection {\n    UUID getId();\n    String getName();\n    ProductType getProductType();\n    // ... solo los campos necesarios para este contexto\n}"
+                },
+                {
+                    "type": "code",
+                    "language": "java",
+                    "content": "public class ProductEntityMapper {\n    // Sobrecarga para manejar proyecciones optimizadas\n    public static Product toDomain(ProductFullProjection projection) {\n        return Product.builder()\n                .id(projection.getId().toString())\n                .name(projection.getName())\n                // ... solo los campos necesarios para este contexto\n                .build();\n    }\n}"
+                },
+                {
+                    "type": "title",
+                    "content": "Diseño y Documentación: Diagramas de Secuencia"
+                },
+                {
+                    "type": "text",
+                    "content": "La etapa de diseño es fundamental. Antes de implementar, se definen los flujos complejos mediante diagramas de secuencia, asegurando que todos los componentes interactúen correctamente según las reglas de negocio."
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-arena-sequence.png",
+                    "alt": "Diagrama de Secuencia de Actualización de Estado"
+                },
+                {
+                    "type": "title",
+                    "content": "Frontend: UI Declarativa y ViewModels"
+                },
+                {
+                    "type": "text",
+                    "content": "Siguiendo el patrón MVVM, se desacopla totalmente la lógica de la representación. La UI es puramente declarativa y no gestiona lógica de negocio ni de estado complejo; su única responsabilidad es renderizar la información proporcionada por el ViewModel. Esto permite testear la lógica de presentación de forma aislada y garantiza que los componentes visuales permanezcan simples y mantenibles."
+                },
+                {
+                    "type": "code",
+                    "language": "typescript",
+                    "content": "// ViewModel: Cerebro de la vista, encapsula lógica y estado\nexport default function ViewModel() {\n    const { productRepository } = useRepositories();\n    const [products, setProducts] = useState<Product[]>([]);\n\n    const fetchProducts = async () => {\n        const response = await productRepository.getAll(...);\n        setProducts(Product.fromList(response.products));\n    };\n\n    return {\n        products,\n        onSearch: fetchProducts,\n        // ... expone solo lo necesario para la UI\n    };\n}"
+                },
+                {
+                    "type": "code",
+                    "language": "typescript",
+                    "content": "// UI (Route): Sin lógica, solo representación\nexport default function ProductsListRoute() {\n    const { products, onSearch, (...) } = ViewModel();\n\n    return (\n        <Layout>\n            <BigTitle text=\"Lista de productos\" />\n            <ProductFilter onSearch={onSearch} (...) />\n            <Table data={products} (...) />\n        </Layout>\n    );\n}"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-arena-client-architecture.png",
+                    "alt": "Arquitectura del Cliente"
+                },
+                {
+                    "type": "title",
+                    "content": "Infraestructura y Observabilidad"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-arena-vps.png",
+                    "alt": "Infraestructura VPS"
+                },
+                {
+                    "type": "title",
+                    "content": "Automatización: Tareas Programadas (Cron Jobs)"
+                },
+                {
+                    "type": "text",
+                    "content": "Para garantizar la integridad de los datos sin intervención humana, el sistema cuenta con tareas programadas que sincronizan información de fuentes externas en segundo plano. Esto incluye la descarga automática de reportes vía FTP desde el ERP Presea y la ingesta de ciclos de producción desde la maquinaria Poyatos."
+                },
+                {
+                    "type": "code",
+                    "language": "java",
+                    "content": "@Component\n@AllArgsConstructor\npublic class PreseaSyncScheduler {\n    private final FtpHelper ftpHelper;\n    private final ProcessPreseaDispatchNotesUseCase processUseCase;\n\n    @Scheduled(cron = \"0 0 1 * * ?\", zone = \"America/Argentina/Buenos_Aires\")\n    public void syncDispatchNotes() {\n        try {\n            // 1. Ingesta automática mediante FTP\n            this.ftpHelper.downloadFile(REMOTE_FILE, LOCAL_DIR, FILENAME);\n\n            // 2. Procesamiento de datos y actualización de stock\n            this.processUseCase.execute(new ProcessPreseaDispatchNotesUseCase.Command(PATH));\n        }\n        catch (Exception e) {\n            log.error(\"Error en sincronización automática: {}\", e.getMessage());\n        }\n    }\n}"
+                }
+            ]
+        }
+    },
+    {
+        "id": 1,
         "title": "Ayudante de Santa",
         "description": "Sistema de cultivos automatizados",
         "technologies": [
@@ -129,7 +258,7 @@
         }
     },
     {
-        "id": 1,
+        "id": 2,
         "title": "Sistema Siete Colores",
         "description": "Sistema de gestión de stock y presupuestos",
         "technologies": [
@@ -140,7 +269,12 @@
             "MONGODB"
         ],
         "images": [
-            "/images/project-siete-colores3.png"
+            "/images/project-siete-colores-system-1.png",
+            "/images/project-siete-colores-system-2.png",
+            "/images/project-siete-colores-system-3.png",
+            "/images/project-siete-colores-system-4.png",
+            "/images/project-siete-colores-system-5.png",
+            "/images/project-siete-colores-system-6.png"
         ],
         "structure": {
             "longDescription": "Sistema de gestión diseñado para una empresa familiar dedicada a la producción de herramientas para artesanía.",
@@ -180,32 +314,43 @@
                 },
                 {
                     "type": "title",
-                    "content": "Módulos principales"
-                },
-                {
-                    "type": "text",
-                    "content": "Incluye editores de productos y categorías, un generador de presupuestos y herramientas específicas para operaciones comerciales recurrentes."
+                    "content": "Interfaz del sistema"
                 },
                 {
                     "type": "image",
-                    "content": "/images/project-siete-colores5.png",
-                    "alt": "Editor de productos"
+                    "content": "/images/project-siete-colores-system-1.png",
+                    "alt": "Dashboard del sistema"
                 },
                 {
                     "type": "image",
-                    "content": "/images/project-siete-colores3.png",
-                    "alt": "Editor de categorías"
+                    "content": "/images/project-siete-colores-system-2.png",
+                    "alt": "Gestión de productos"
                 },
                 {
                     "type": "image",
-                    "content": "/images/project-siete-colores4.png",
-                    "alt": "Creador de presupuestos"
+                    "content": "/images/project-siete-colores-system-3.png",
+                    "alt": "Editor de precios"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores-system-4.png",
+                    "alt": "Generador de presupuestos"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores-system-5.png",
+                    "alt": "Control de stock"
+                },
+                {
+                    "type": "image",
+                    "content": "/images/project-siete-colores-system-6.png",
+                    "alt": "Configuración del sistema"
                 }
             ]
         }
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "Web Siete Colores",
         "description": "Catálogo web con carrito de compras",
         "technologies": [
@@ -267,7 +412,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Music Forum",
         "description": "Backend basado en microservicios",
         "technologies": [
@@ -320,7 +465,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Ecommerce",
         "description": "Dummy project para exhibición de documentación y arquitectura",
         "technologies": [

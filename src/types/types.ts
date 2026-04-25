@@ -17,6 +17,7 @@ export type StructureElement = {
 	content: string;
 	url?: string;
 	alt?: string;
+	language?: string;
 };
 
 export type Link = {

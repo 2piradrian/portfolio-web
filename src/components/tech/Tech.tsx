@@ -37,6 +37,10 @@ export default function Tech({ tech }: Props) {
 			return <Image src={getImagePath("mongodb")} alt="" />;
 		case "POSTGRESQL":
 			return <Image src={getImagePath("postgresql")} alt="" />;
+		case "DOCKER":
+			return <Image src={getImagePath("docker")} alt="" />;
+		case "PYTHON":
+			return <Image src={getImagePath("python")} alt="" />;
 		default:
 			return <span>{tech}</span>;
 	}
