@@ -38,6 +38,24 @@
                 },
                 {
                     "type": "title",
+                    "content": "Desacoplamiento de Persistencia: Ports & Adapters (PostgreSQL vs .mdb)"
+                },
+                {
+                    "type": "text",
+                    "content": "Siguiendo estrictamente Clean Architecture, el Core de dominio define únicamente interfaces de repositorios (ej. PoyatosRepositoryI, ProductRepositoryI), permaneciendo 100% agnóstico a la tecnología de base de datos. Las implementaciones concretas residen en la capa de infraestructura mediante Adapters: mientras ProductRepositoryAdapter interactúa con PostgreSQL vía JPA, PoyatosRepositoryAdapter se encarga de consultar bases de datos en formato Microsoft Access (.mdb) provenientes de maquinaria industrial y Mappers especializados transforman los datos hacia entidades del dominio. Esto permitió integrar maquinaria legada sin alterar la lógica de negocio."
+                },
+                {
+                    "type": "code",
+                    "language": "java",
+                    "content": "// Puerto de Dominio: Agnóstico a la tecnología de base de datos\npublic interface PoyatosRepositoryI {\n    List<Production> getProductions(String moldName, String productName);\n    SliceStructure<Production> getPaginated(Integer page, Integer size, String moldName, String productName, LocalDateTime startDate, LocalDateTime endDate);\n    List<Mold> getMolds();\n}"
+                },
+                {
+                    "type": "code",
+                    "language": "java",
+                    "content": "// Adaptador de Infraestructura: Consulta de archivos .mdb (Microsoft Access)\n@Component\n@AllArgsConstructor\npublic class PoyatosRepositoryAdapter implements PoyatosRepositoryI {\n\n    private final PoyatosRepository poyatosRepository; // Repositorio nativo .mdb\n\n    @Override\n    public List<Production> getProductions(String moldName, String productName) {\n        List<ProductionModel> productionModels = poyatosRepository.getProductions(productName, moldName);\n        // Transformación de modelos de infraestructura .mdb a entidades de dominio\n        return PoyatosProductionMapper.toDomain(productionModels);\n    }\n}"
+                },
+                {
+                    "type": "title",
                     "content": "Casos de Uso: Orquestación y Auditoría"
                 },
                 {
