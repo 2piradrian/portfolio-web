@@ -3,21 +3,21 @@
         "id": 0,
         "position": "Software Developer",
         "company": "Nesus | Arena Hnos.",
-        "description": "Desarrollo un sistema de información para gestión de procesos productivos, conciliación y de auditoría para una fábrica de adoquines. El sistema es construido con un enfoque estricto en Clean Architecture y principios de diseño, orientado a casos de uso, utilizando Java con Spring Boot en el backend y React en el frontend. Además, mantengo la documentación del sistema con UML.",
+        "description": "Desarrollé un sistema de información para gestión de procesos productivos, conciliación y de auditoría para una fábrica de adoquines. El sistema fue construido con un enfoque estricto en Clean Architecture y principios de diseño, orientado a casos de uso, utilizando Java con Spring Boot en el backend y React en el frontend. Además, mantuve la documentación del sistema con UML.",
         "date": "Dic. 2025 - Ago. 2026"
     },
     {
         "id": 1,
         "position": "Data Automation & Analytics",
         "company": "Nesus",
-        "description": "Desarrollo scripts en Python para automatizar procesos repetitivos relacionados con la generación de reportes, facilitando el trabajo de los analistas de datos. Esto incluye scraping de datos, consumo de APIs, lectura desde archivos Excel o CSV, y realización de cálculos para obtener información relevante. También colaboro en la construcción de dashboards en Power BI.",
+        "description": "Desarrollé scripts en Python para automatizar procesos repetitivos relacionados con la generación de reportes, facilitando el trabajo de los analistas de datos. Esto incluyó scraping de datos, consumo de APIs, lectura desde archivos Excel o CSV, y realización de cálculos para obtener información relevante. También colaboré en la construcción de dashboards en Power BI.",
         "date": "Feb. 2025 - Dic. 2025"
     },
     {
         "id": 2,
         "position": "Analista Desarrollador & Cofounder",
         "company": "Ayudante de Santa",
-        "description": "Este sistema permite automatizar el cuidado de cultivos mediante el monitoreo y control de variables ambientales. El proyecto consistió en construir la solución completa: desde el diseño del circuito electrónico y la programación del firmware en C, hasta el desarrollo de una API para la gestión de datos y una aplicación móvil que se comunica con el hardware para ofrecer control total al usuario.",
+        "description": "Este sistema permitía automatizar el cuidado de cultivos mediante el monitoreo y control de variables ambientales. El proyecto consistió en construir la solución completa: desde el diseño del circuito electrónico y la programación del firmware en C, hasta el desarrollo de una API para la gestión de datos y una aplicación móvil que se comunicaba con el hardware para ofrecer control total al usuario.",
         "date": "Mar. 2021 - Dic. 2024"
     }
 ]
