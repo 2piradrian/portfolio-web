@@ -51,6 +51,24 @@
                 },
                 {
                     "type": "title",
+                    "content": "Extensibilidad: Patrón Strategy & Factory"
+                },
+                {
+                    "type": "text",
+                    "content": "Para gestionar operaciones dinámicas (como aprobaciones de solicitudes de stock, archivado de registros o tableros de control por rol), se implementó el patrón Strategy combinado con una Factory mediante Inyección de Dependencias. Spring inyecta automáticamente la lista de todas las estrategias disponibles y la Factory las mapea en O(1) según su tipo. Esto permite agregar nuevos flujos creando una nueva clase anotada con @Component, cumpliendo de forma estricta con el principio Open-Closed (OCP) sin alterar el código existente."
+                },
+                {
+                    "type": "code",
+                    "language": "java",
+                    "content": "@Component\npublic class ApprovalStrategyFactory {\n\n    private final Map<ApprovalType, ApprovalStrategy> strategies;\n\n    // Inyección automática de todas las implementaciones de ApprovalStrategy\n    public ApprovalStrategyFactory(List<ApprovalStrategy> strategyList) {\n        this.strategies = strategyList.stream()\n                .collect(Collectors.toMap(ApprovalStrategy::getType, Function.identity()));\n    }\n\n    public ApprovalStrategy getStrategy(ApprovalType type) {\n        ApprovalStrategy strategy = strategies.get(type);\n        if (strategy == null) {\n            throw new IllegalArgumentException(\"No strategy found for type: \" + type);\n        }\n        return strategy;\n    }\n}"
+                },
+                {
+                    "type": "code",
+                    "language": "java",
+                    "content": "@Component\n@AllArgsConstructor\npublic class ProductStockApprovalStrategy implements ApprovalStrategy {\n\n    private final ProductStockRepositoryI productStockRepository;\n    private final UpdateProductStockUseCase updateProductStockUseCase;\n\n    @Override\n    public ApprovalType getType() {\n        return ApprovalType.UPDATE_PRODUCT_STOCK;\n    }\n\n    @Override\n    public void executeApprovedAction(User requester, Map<String, Object> payload) {\n        // Encapsulación de la lógica específica para la aprobación de stock de productos\n        this.updateProductStockUseCase.execute(new UpdateProductStockUseCase.Command(\n                requester,\n                (String) payload.get(\"productId\"),\n                Quality.fromString((String) payload.get(\"quality\")),\n                (String) payload.get(\"locationId\"),\n                NumbersHandler.getDouble(payload, \"quantity\"),\n                NumbersHandler.getDouble(payload, \"minimumStock\"),\n                (String) payload.get(\"reason\")\n        ));\n    }\n}"
+                },
+                {
+                    "type": "title",
                     "content": "Optimización: Proyecciones y Mappers"
                 },
                 {
