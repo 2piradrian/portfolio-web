@@ -1,6 +1,6 @@
 import { Project } from "@/types/types";
 import Link from "next/link";
-import Tech from "../tech/Tech";
+import Chip from "../chip/Chip";
 import style from "./style.module.css";
 
 export default function ProjectCard({ id, title, description, images, technologies }: Project) {
@@ -15,9 +15,7 @@ export default function ProjectCard({ id, title, description, images, technologi
 					<p className={style.description}>{description}</p>
 					<div className={style.techStack}>
 						{technologies.map((technology) => (
-							<div key={technology} className={style.techIcon}>
-								<Tech tech={technology} />
-							</div>
+							<Chip key={technology} text={technology} />
 						))}
 					</div>
 				</div>

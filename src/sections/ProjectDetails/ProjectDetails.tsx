@@ -1,6 +1,6 @@
 import { Project } from "@/types/types";
 import ProjectElement from "@/components/project-element/ProjectElement";
-import Tech from "@/components/tech/Tech";
+import Chip from "@/components/chip/Chip";
 import Title from "@/components/title/Title";
 import style from "./style.module.css";
 
@@ -19,7 +19,7 @@ export default function ProjectDetails({ project }: Props) {
 					<h3 className={style.techsTitle}>Hecho con:</h3>
 					<div className={style.technologiesContainer}>
 						{project.technologies.map((technology) => (
-							<Tech tech={technology} key={technology} />
+							<Chip key={technology} text={technology} />
 						))}
 					</div>
 				</div>

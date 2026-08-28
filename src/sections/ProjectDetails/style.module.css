@@ -29,13 +29,8 @@
 .technologiesContainer {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 16px;
+	gap: 8px;
 	align-items: center;
-}
-
-.technologiesContainer img {
-	height: 30px;
-	width: auto;
 }
 
 .content {

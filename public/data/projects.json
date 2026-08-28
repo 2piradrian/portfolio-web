@@ -4,13 +4,13 @@
         "title": "Arena",
         "description": "Sistema ERP/MES para gestión de producción industrial",
         "technologies": [
-            "JAVA",
-            "SPRINGBOOT",
-            "POSTGRESQL",
-            "TS",
-            "REACT",
-            "DOCKER",
-            "PYTHON"
+            "Java",
+            "Spring Boot",
+            "PostgreSQL",
+            "TypeScript",
+            "React",
+            "Docker",
+            "Python"
         ],
         "images": [
             "/images/project-arena-main.png"
@@ -134,13 +134,13 @@
         "description": "Sistema de IoT para automatización de cultivos",
         "technologies": [
             "C",
-            "KOTLIN",
-            "COMPOSE",
-            "TS",
-            "NODEJS",
-            "EXPRESS",
-            "MONGODB",
-            "DOCKER"
+            "Kotlin",
+            "Android Jetpack",
+            "TypeScript",
+            "Node",
+            "Express",
+            "MongoDB",
+            "Docker"
         ],
         "images": [
             "/images/project-ads1.png",

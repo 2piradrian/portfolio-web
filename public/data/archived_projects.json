@@ -4,11 +4,11 @@
         "title": "Sistema Siete Colores",
         "description": "Sistema de gestión de stock y presupuestos",
         "technologies": [
-            "TS",
-            "REACT",
-            "NODEJS",
-            "EXPRESS",
-            "MONGODB"
+            "TypeScript",
+            "React",
+            "Node.js",
+            "Express",
+            "MongoDB"
         ],
         "images": [
             "/images/project-siete-colores-system-1.png",
@@ -96,8 +96,8 @@
         "title": "Web Siete Colores",
         "description": "Catálogo web con carrito de compras",
         "technologies": [
-            "TS",
-            "REACT"
+            "TypeScript",
+            "React"
         ],
         "images": [
             "/images/project-siete-colores-web5.png"
@@ -158,11 +158,11 @@
         "title": "Music Forum",
         "description": "Backend basado en microservicios",
         "technologies": [
-            "JAVA",
-            "SPRINGBOOT",
-            "SPRINGCLOUD",
-            "POSTGRESQL",
-            "MONGODB"
+            "Java",
+            "Spring Boot",
+            "Spring Cloud",
+            "PostgreSQL",
+            "MongoDB"
         ],
         "images": [
             "/images/project-music-forum-2.jpg"
@@ -211,9 +211,9 @@
         "title": "Ecommerce",
         "description": "Dummy project para exhibición de documentación y arquitectura",
         "technologies": [
-            "KOTLIN",
-            "SPRINGBOOT",
-            "POSTGRESQL"
+            "Kotlin",
+            "Spring Boot",
+            "PostgreSQL"
         ],
         "images": [
             "/images/software-architectures.webp"
