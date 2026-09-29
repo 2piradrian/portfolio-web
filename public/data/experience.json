@@ -2,23 +2,23 @@
     {
         "id": 0,
         "position": "Analista Desarrollador de Software",
-        "company": "Edit Software",
-        "description": "Brindo soporte y mantenimiento a una aplicación de monitoreo de redes de gran escala.",
+        "company": "Edit Software | Cirion",
+        "description": "Realizo análisis y resolución de incidentes sobre una aplicación de monitoreo de redes de gran escala en entornos productivos, investigando reglas de negocio, datos y comportamiento de los distintos componentes para determinar el origen de las fallas. Trabajo principalmente sobre logs, bases de datos, servicios e integraciones, realizando las correcciones necesarias y validando su impacto en la aplicación.",
         "date": "Ago. 2026 - Actualidad"
     },
     {
         "id": 1,
         "position": "Analista Desarrollador de Software",
-        "company": "Arena Hnos.",
+        "company": "Nesus | Arena Hnos.",
         "description": "Desarrollé un sistema de información para gestión de procesos productivos, conciliación y de auditoría para una fábrica de adoquines. El sistema fue construido con un enfoque estricto en Clean Architecture y principios de diseño, orientado a casos de uso, utilizando Java con Spring Boot en el backend y React en el frontend. Además, mantuve la documentación del sistema con UML.",
-        "date": "Dic. 2025 - Ago. 2026"
+        "date": "Sep. 2025 - Ago. 2026"
     },
     {
         "id": 2,
         "position": "Data Automation & Analytics",
         "company": "Nesus",
         "description": "Desarrollé scripts en Python para automatizar procesos repetitivos relacionados con la generación de reportes, facilitando el trabajo de los analistas de datos. Esto incluyó scraping de datos, consumo de APIs, lectura desde archivos Excel o CSV, y realización de cálculos para obtener información relevante. También colaboré en la construcción de dashboards en Power BI.",
-        "date": "Feb. 2025 - Dic. 2025"
+        "date": "Ene. 2025 - Sep. 2025"
     },
     {
         "id": 3,
